@@ -15,3 +15,8 @@ ln -s ~/dotfiles/.screenrc ~/.screenrc
 # git
 ln -s ~/dotfiles/git/.gitconfig ~/.gitconfig
 ln -s ~/dotfiles/git/.gitignore ~/.gitignore
+
+# vim + janus
+ln -s ~/dotfiles/vim/.vimrc.before ~/.vimrc.before
+ln -s ~/dotfiles/vim/.vimrc.after ~/.vimrc.after
+ln -s ~/dotfiles/vim/.janus ~/.janus
