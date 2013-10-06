@@ -1,0 +1,11 @@
+export PATH=$HOME/bin:$PATH
+
+# mamp
+export PATH=/Applications/MAMP/bin/php/php5.4.4/bin:$PATH
+export PATH=/Applications/MAMP/Library/bin:$PATH
+
+# composer (php)
+export PATH=$HOME/.composer/bin:$PATH
+
+# postgres
+export PATH="/Applications/Postgres.app/Contents/MacOS/bin:$PATH"

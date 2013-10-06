@@ -1,0 +1,11 @@
+# Hide start message
+startup_message off
+
+# Keep a larger history
+defscrollback 10000
+
+# Save daily log files
+logfile ~/logs/screen_%y-%m-%d_%0c
+
+shell -$SHELL
+caption always "%{= Wk}%-w%{= Bw}%n %t%{-}%+w %-="

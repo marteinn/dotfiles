@@ -1,0 +1,8 @@
+# shell
+export PS1="\[\033[0;31m\]\h:\W \u\[\033[0m\]$ "
+
+# shortcuts
+export P="$HOME/Projekt"
+
+# wp-cli (composer app)
+export WP_CLI_PHP=/Applications/MAMP/bin/php/php5.3.14/bin/php

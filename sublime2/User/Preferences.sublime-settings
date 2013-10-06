@@ -1,0 +1,13 @@
+{
+    "font_size": 11.0,
+    "ignored_packages":[],
+    "rulers":[80],
+    "show_minimap": false,
+    "soda_classic_tabs": true,
+    "drawWhiteSpace": true,
+    "ensure_newline_at_eof_on_save": true,
+    "trim_trailing_white_space_on_save": true,
+    "translate_tabs_to_spaces": true,
+    "highlight_modified_tabs": true,
+    "vintage_start_in_command_mode": true
+}

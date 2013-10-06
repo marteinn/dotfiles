@@ -1,0 +1,4 @@
+# alias
+alias ll='ls -lh'
+
+[ -n "$PS1" ] && source ~/dotfiles/xcode/.aliases
