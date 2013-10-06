@@ -8,4 +8,6 @@ defscrollback 10000
 logfile ~/logs/screen_%y-%m-%d_%0c
 
 shell -$SHELL
+
+# Show nice buttom bar
 caption always "%{= Wk}%-w%{= Bw}%n %t%{-}%+w %-="
