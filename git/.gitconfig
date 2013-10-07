@@ -25,3 +25,5 @@
     excludesfile = ~/.gitignore
 [color]
     diff = true
+[push]
+	default = simple
