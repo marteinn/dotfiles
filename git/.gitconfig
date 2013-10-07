@@ -6,6 +6,7 @@
 [alias]
     a = add
     ai = add -i
+    b = branch
     c = commit
     cm = commit -m
     ch = checkout
