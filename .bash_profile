@@ -4,4 +4,5 @@
 [ -n "$PS1" ] && source ~/.aliases
 [ -n "$PS1" ] && source ~/.functions
 
+[ -n "$PS1" ] && source ~/dotfiles/ruby/rvm.sh
 # source /usr/local/bin/virtualenvwrapper.sh

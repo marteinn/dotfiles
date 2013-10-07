@@ -9,3 +9,5 @@ export PATH=$HOME/.composer/bin:$PATH
 
 # postgres
 export PATH="/Applications/Postgres.app/Contents/MacOS/bin:$PATH"
+
+[ -n "$PS1" ] && source ~/dotfiles/ruby/.paths
