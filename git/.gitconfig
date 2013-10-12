@@ -6,16 +6,24 @@
 [alias]
     a = add
     ai = add -i
+    b = branch
     c = commit
     cm = commit -m
     ch = checkout
     lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
-     undo = reset --hard HEAD~1
+    undo = reset --hard HEAD~1
     au = !"git status --porcelain | awk '/\\?\\?/{ print $2 }' | xargs git add" # Add untracked files
     d = diff --color-words
     dh = diff --color-words head
     t = tag -n
     s = status -s
 
+    master = checkout master
+    develop = checkout develop
+
 [core]
     excludesfile = ~/.gitignore
+[color]
+    diff = true
+[push]
+	default = simple

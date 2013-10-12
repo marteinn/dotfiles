@@ -5,4 +5,7 @@ alias l="ls -CF"
 
 alias ..="cd .."
 
+# start tomcat (with solr)
+alias solr="catalina start"
+
 [ -n "$PS1" ] && source ~/dotfiles/xcode/.aliases

@@ -7,7 +7,14 @@ defscrollback 10000
 # Save daily log files
 logfile ~/logs/screen_%y-%m-%d_%0c
 
+# shell:  Default process started in screen's windows.
+# Makes it possible to use a different shell inside screen
+# than is set as the default login shell.
+# If begins with a '-' character, the shell will be started as a login shell.
 shell -$SHELL
 
 # Show nice buttom bar
 caption always "%{= Wk}%-w%{= Bw}%n %t%{-}%+w %-="
+
+# Make xterm scrolling work properly with screen.
+termcapinfo xterm-color|xterm|xterms|xs|rxvt ti@:te@

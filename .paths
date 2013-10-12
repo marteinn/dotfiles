@@ -1,5 +1,8 @@
 export PATH=$HOME/bin:$PATH
 
+# npm
+export PATH=/usr/local/share/npm/bin:$PATH
+
 # mamp
 export PATH=/Applications/MAMP/bin/php/php5.4.4/bin:$PATH
 export PATH=/Applications/MAMP/Library/bin:$PATH
@@ -9,3 +12,5 @@ export PATH=$HOME/.composer/bin:$PATH
 
 # postgres
 export PATH="/Applications/Postgres.app/Contents/MacOS/bin:$PATH"
+
+[ -n "$PS1" ] && source ~/dotfiles/ruby/.paths

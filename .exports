@@ -6,3 +6,8 @@ export P="$HOME/Projekt"
 
 # wp-cli (composer app)
 export WP_CLI_PHP=/Applications/MAMP/bin/php/php5.3.14/bin/php
+
+# postgres
+export PGHOST=localhost
+
+[ -n "$PS1" ] && source ~/dotfiles/ruby/.exports

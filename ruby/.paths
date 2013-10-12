@@ -1,0 +1,2 @@
+# ruby
+export PATH=$PATH:$HOME/.rvm/src/rvm/bin
