@@ -1,7 +1,8 @@
 {
     "font_size": 11.0,
     "ignored_packages":[],
-    "rulers":[80],
+    "rulers":[80, 120],
+    "word_wrap": false,
     "show_minimap": false,
     "soda_classic_tabs": true,
     "drawWhiteSpace": true,
