@@ -11,7 +11,7 @@
     cm = commit -m
     ch = checkout
     lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
-    undo = reset --hard HEAD~1
+    undo = reset --soft HEAD~1
     au = !"git status --porcelain | awk '/\\?\\?/{ print $2 }' | xargs git add" # Add untracked files
     d = diff --color-words --ignore-space-at-eol -b -w
     dh = diff --color-words --ignore-space-at-eol -b -w head
