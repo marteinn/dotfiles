@@ -10,4 +10,7 @@ export WP_CLI_PHP=/Applications/MAMP/bin/php/php5.3.14/bin/php
 # postgres
 export PGHOST=localhost
 
+# solr
+export SOLR_PATH=/usr/local/Cellar/solr/4.1.0/libexec/example/solr/
+
 [ -n "$PS1" ] && source ~/dotfiles/ruby/.exports
