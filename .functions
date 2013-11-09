@@ -6,3 +6,8 @@ function mkd() {
 # Tab completion for ssh hosts, from:
 # http://feeds.macosxhints.com/~r/macosxhints/recent/~3/257065700/article.php
 complete -W "$(echo `cat ~/.ssh/known_hosts | cut -f 1 -d ' ' | sed -e s/,.*//g | uniq | grep -v "\["`;)" ssh
+
+# Serve static web assets
+function simple_webserver {
+    python -m SimpleHTTPServer 8001
+}
