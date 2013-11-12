@@ -12,6 +12,10 @@ ln -s ~/dotfiles/bin ~/bin
 # screen
 ln -s ~/dotfiles/.screenrc ~/.screenrc
 
+# tmux
+ln -s ~/dotfiles/.tmux.conf ~/.tmux.conf
+
+
 # git
 ln -s ~/dotfiles/git/.gitconfig ~/.gitconfig
 ln -s ~/dotfiles/git/.gitignore ~/.gitignore
