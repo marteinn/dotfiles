@@ -15,6 +15,8 @@ ln -s ~/dotfiles/.screenrc ~/.screenrc
 # tmux
 ln -s ~/dotfiles/.tmux.conf ~/.tmux.conf
 
+# psql
+ln -s ~/dotfiles/.psqlrc ~/.psqlrc
 
 # git
 ln -s ~/dotfiles/git/.gitconfig ~/.gitconfig
