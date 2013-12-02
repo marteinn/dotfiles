@@ -1,5 +1,7 @@
-# shell
-export PS1="\[\033[0;31m\]\h:\W \u\[\033[0m\]$ "
+# shell (only use if zsh is not available)
+if [ -z "$ZSH_NAME" ]; then
+    export PS1="\[\033[0;31m\]\h:\W \u\[\033[0m\]$ "
+fi
 
 # shortcuts
 export P="$HOME/Projekt"
