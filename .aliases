@@ -1,9 +1,11 @@
 # alias
-alias ll="ls -l"
-alias la="ls -A"
-alias l="ls -CF"
+if [ -z "$ZSH_NAME" ]; then
+    alias ll="ls -l"
+    alias la="ls -A"
+    alias l="ls -CF"
 
-alias ..="cd .."
+    alias ..="cd .."
+fi
 
 # start tomcat (with solr)
 alias solr="catalina start"
