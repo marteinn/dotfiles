@@ -16,7 +16,7 @@ ln -s ~/dotfiles/.screenrc ~/.screenrc
 ln -s ~/dotfiles/.tmux.conf ~/.tmux.conf
 
 # zsh
-ln -s ~/dotfiles/.zprofile ~/.zprofile.conf
+ln -s ~/dotfiles/.zprofile ~/.zprofile
 
 # psql
 ln -s ~/dotfiles/.psqlrc ~/.psqlrc
