@@ -13,3 +13,8 @@ fi
 function simple_webserver {
     python -m SimpleHTTPServer 8001
 }
+
+# HTTP lookup
+function http() {
+    curl http://httpcode.info/$1;
+}
