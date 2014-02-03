@@ -12,6 +12,12 @@ export PATH=/Applications/MAMP/Library/bin:$PATH
 export PATH=$HOME/.composer/bin:$PATH
 
 # postgres
-export PATH="/Applications/Postgres.app/Contents/MacOS/bin:$PATH"
+if [ -d "/Applications/Postgres93.app/" ]; then
+    export PATH="/Applications/Postgres93.app/Contents/MacOS/bin:$PATH"
+fi
+
+if [ -d "/Applications/Postgres.app/" ]; then
+    export PATH="/Applications/Postgres.app/Contents/MacOS/bin:$PATH"
+fi
 
 [ -n "$PS1" ] && source ~/dotfiles/ruby/.paths
