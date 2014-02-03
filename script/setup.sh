@@ -1,31 +1,31 @@
 #!/usr/bin/env bash
 
 # general
-ln -s ~/dotfiles/.paths ~/.paths
-ln -s ~/dotfiles/.aliases ~/.aliases
-ln -s ~/dotfiles/.exports ~/.exports
-ln -s ~/dotfiles/.functions ~/.functions
-ln -s ~/dotfiles/.bash_profile ~/.bash_profile
+ln -sf ~/dotfiles/.paths ~/.paths
+ln -sf ~/dotfiles/.aliases ~/.aliases
+ln -sf ~/dotfiles/.exports ~/.exports
+ln -sf ~/dotfiles/.functions ~/.functions
+ln -sf ~/dotfiles/.bash_profile ~/.bash_profile
 
-ln -s ~/dotfiles/bin ~/bin
+ln -sf ~/dotfiles/bin ~/bin
 
 # screen
-ln -s ~/dotfiles/.screenrc ~/.screenrc
+ln -sf ~/dotfiles/.screenrc ~/.screenrc
 
 # tmux
-ln -s ~/dotfiles/.tmux.conf ~/.tmux.conf
+ln -sf ~/dotfiles/.tmux.conf ~/.tmux.conf
 
 # zsh
-ln -s ~/dotfiles/.zprofile ~/.zprofile
+ln -sf ~/dotfiles/.zprofile ~/.zprofile
 
 # psql
-ln -s ~/dotfiles/.psqlrc ~/.psqlrc
+ln -sf ~/dotfiles/.psqlrc ~/.psqlrc
 
 # git
-ln -s ~/dotfiles/git/.gitconfig ~/.gitconfig
-ln -s ~/dotfiles/git/.gitignore ~/.gitignore
+ln -sf ~/dotfiles/git/.gitconfig ~/.gitconfig
+ln -sf ~/dotfiles/git/.gitignore ~/.gitignore
 
 # vim + janus
-ln -s ~/dotfiles/vim/.vimrc.before ~/.vimrc.before
-ln -s ~/dotfiles/vim/.vimrc.after ~/.vimrc.after
-ln -s ~/dotfiles/vim/.janus ~/.janus
+ln -sf ~/dotfiles/vim/.vimrc.before ~/.vimrc.before
+ln -sf ~/dotfiles/vim/.vimrc.after ~/.vimrc.after
+ln -sf ~/dotfiles/vim/.janus ~/.janus
