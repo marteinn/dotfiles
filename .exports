@@ -6,9 +6,6 @@ fi
 # shortcuts
 export P="$HOME/Projekt"
 
-# wp-cli (composer app)
-export WP_CLI_PHP=/Applications/MAMP/bin/php/php5.3.14/bin/php
-
 # postgres
 export PGHOST=localhost
 
@@ -20,4 +17,5 @@ export HISTCONTROL=ignoredups
 # Make some commands not show up in history
 export HISTIGNORE="ls:ls *:cd:cd -:pwd;exit:date:* --help"
 
+[ -n "$PS1" ] && source ~/dotfiles/php/.exports
 [ -n "$PS1" ] && source ~/dotfiles/ruby/.exports
