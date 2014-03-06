@@ -18,3 +18,8 @@ function simple_webserver {
 function http() {
     curl http://httpcode.info/$1;
 }
+
+# Start a plain mail server
+function simple_mailserver {
+    python -m smtpd -n -c DebuggingServer localhost:1025
+}

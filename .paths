@@ -4,19 +4,15 @@ export PATH=/usr/local/bin:$PATH
 # npm
 export PATH=/usr/local/share/npm/bin:$PATH
 
-# mamp
-export PATH=/Applications/MAMP/bin/php/php5.4.4/bin:$PATH
-export PATH=/Applications/MAMP/Library/bin:$PATH
-
-# composer (php)
-export PATH=$HOME/.composer/bin:$PATH
-
 # postgres
-
 if [ -x /Applications/Postgres93.app ]; then
     export PATH=/Applications/Postgres93.app/Contents/MacOS/bin:$PATH
 else
     export PATH=/Applications/Postgres.app/Contents/MacOS/bin:$PATH
 fi
 
+# php
+[ -n "$PS1" ] && source ~/dotfiles/php/.paths
+
+# ruby
 [ -n "$PS1" ] && source ~/dotfiles/ruby/.paths
