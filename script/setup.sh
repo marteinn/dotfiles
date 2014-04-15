@@ -9,6 +9,9 @@ ln -sf ~/dotfiles/.bash_profile ~/.bash_profile
 
 ln -sf ~/dotfiles/bin ~/bin
 
+# ssh
+ln -sf ~/dotfiles/ssh/config ~/.ssh/config
+
 # screen
 ln -sf ~/dotfiles/.screenrc ~/.screenrc
 

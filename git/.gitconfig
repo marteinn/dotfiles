@@ -1,8 +1,8 @@
 [user]
-    name = Martin Sandström
-    email = martin@marteinn.se
+	name = Martin Sandström
+	email = martin@marteinn.se
 [mergetool]
-    keepBackup = true
+	keepBackup = true
 [alias]
     a = add
     ai = add -i
