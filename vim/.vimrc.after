@@ -1,1 +1,4 @@
 set tabstop=4 "Use four spaces
+set nobackup
+set nowritebackup
+set noswapfile
