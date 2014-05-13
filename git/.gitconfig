@@ -20,6 +20,7 @@
     dh = diff --color-words --ignore-space-at-eol -b -w head
     t = tag -n
     s = status -s
+    restore-file = !git checkout $(git rev-list -n 1 HEAD -- "$1")^ -- "$1" # Restore deleted file
 
     master = checkout master
     develop = checkout develop
