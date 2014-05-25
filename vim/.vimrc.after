@@ -3,5 +3,5 @@ set nobackup
 set nowritebackup
 set noswapfile
 
-# Toggle nerdtree
+" Toggle nerdtree
 map <leader>n :NERDTreeToggle<CR>
