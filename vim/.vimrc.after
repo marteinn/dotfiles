@@ -1,7 +1,10 @@
-set tabstop=4 "Use four spaces
+let s:tabwidth=4 "Use four spaces
+exec 'set tabstop='    .s:tabwidth
+exec 'set shiftwidth=' .s:tabwidth
+exec 'set softtabstop='.s:tabwidth
+
 set nobackup
 set nowritebackup
 set noswapfile
 
-" Toggle nerdtree
-map <leader>n :NERDTreeToggle<CR>
+set tags=./tags,./.tags,tags,.tags;/
