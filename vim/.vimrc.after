@@ -8,3 +8,4 @@ set nowritebackup
 set noswapfile
 
 set tags=./tags,./.tags,tags,.tags;/
+set clipboard=unnamed
