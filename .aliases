@@ -7,6 +7,9 @@ if [ -z "$ZSH_NAME" ]; then
     alias ..="cd .."
 fi
 
+# git typo
+alias gti="git"
+
 # start tomcat (with solr)
 alias solr="catalina start"
 
