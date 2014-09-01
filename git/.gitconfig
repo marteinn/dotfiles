@@ -12,6 +12,7 @@
     c = commit
     cm = commit -m
     ch = checkout
+    lv = !sh -c 'git log --oneline --decorate $1' -
     l = git log --name-status
     lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
     undo = reset --soft HEAD~1
