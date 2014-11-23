@@ -29,7 +29,6 @@ ln -sf ~/dotfiles/.psqlrc ~/.psqlrc
 ln -sf ~/dotfiles/git/.gitconfig ~/.gitconfig
 ln -sf ~/dotfiles/git/.gitignore ~/.gitignore
 
-# vim + janus
-ln -sf ~/dotfiles/vim/.vimrc.before ~/.vimrc.before
-ln -sf ~/dotfiles/vim/.vimrc.after ~/.vimrc.after
-ln -sf ~/dotfiles/vim/.janus ~/.janus
+# vim
+ln -sf ~/dotfiles/vim/.vimrc ~/.vimrc
+
