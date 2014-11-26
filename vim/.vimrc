@@ -70,6 +70,7 @@ Bundle 'jeetsukumaran/vim-buffergator'
 Bundle 'Shougo/neocomplcache'
 Bundle 'Shougo/neosnippet'
 Bundle 'Shougo/neosnippet-snippets'
+Bundle 'groenewege/vim-less'
 
 call vundle#end()
 filetype plugin indent on
