@@ -70,6 +70,8 @@ Bundle 'jeetsukumaran/vim-buffergator'
 Bundle 'Shougo/neocomplcache'
 Bundle 'Shougo/neosnippet'
 Bundle 'Shougo/neosnippet-snippets'
+Bundle 'groenewege/vim-less'
+Bundle 'ap/vim-css-color'
 
 call vundle#end()
 filetype plugin indent on
@@ -106,7 +108,6 @@ let NERDTreeMinimalUI=1
 let NERDTreeShowHidden=1
 map <leader>n :NERDTreeToggle<CR>
 
-autocmd vimenter * NERDTree
 
 " Auto close NT
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
