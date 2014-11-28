@@ -72,6 +72,7 @@ Bundle 'Shougo/neosnippet'
 Bundle 'Shougo/neosnippet-snippets'
 Bundle 'groenewege/vim-less'
 Bundle 'ap/vim-css-color'
+Bundle 'majutsushi/tagbar'
 
 call vundle#end()
 filetype plugin indent on
@@ -127,4 +128,7 @@ set ttimeoutlen=50
 
 "" neocomplcache
 let g:neocomplcache_enable_at_startup = 1
+
+"" Tagbar
+map <leader>rt :TagbarToggle<CR>
 
