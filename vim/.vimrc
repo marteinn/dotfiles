@@ -70,9 +70,10 @@ Bundle 'jeetsukumaran/vim-buffergator'
 Bundle 'Shougo/neocomplcache'
 Bundle 'Shougo/neosnippet'
 Bundle 'Shougo/neosnippet-snippets'
-Bundle 'groenewege/vim-less'
 Bundle 'ap/vim-css-color'
+Bundle 'groenewege/vim-less'
 Bundle 'majutsushi/tagbar'
+
 
 call vundle#end()
 filetype plugin indent on
@@ -131,4 +132,7 @@ let g:neocomplcache_enable_at_startup = 1
 
 "" Tagbar
 map <leader>rt :TagbarToggle<CR>
+
+"" Neocomplcache
+inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 
