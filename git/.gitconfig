@@ -1,10 +1,10 @@
 [user]
     name = Martin Sandström
     email = martin@marteinn.se
-    
+
 [mergetool]
     keepBackup = true
-    
+
 [alias]
     a = add
     ai = add -i
@@ -28,9 +28,10 @@
 
 [core]
     excludesfile = ~/.gitignore
-    
+    editor = /usr/bin/vim
+
 [color]
     diff = true
-    
+
 [push]
     default = simple
