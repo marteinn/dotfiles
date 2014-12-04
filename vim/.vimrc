@@ -73,6 +73,7 @@ Bundle 'Shougo/neosnippet-snippets'
 Bundle 'ap/vim-css-color'
 Bundle 'groenewege/vim-less'
 Bundle 'majutsushi/tagbar'
+Bundle 'miyakogi/conoline.vim'
 
 
 call vundle#end()
@@ -135,4 +136,11 @@ map <leader>rt :TagbarToggle<CR>
 
 "" Neocomplcache
 inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
+
+"" Syntastic
+let g:syntastic_html_tidy_ignore_errors=[" proprietary attribute \"ng-"]
+
+"" ConoLine
+let g:conoline_auto_enable = 1
+let g:conoline_use_colorscheme_default_normal=1
 
