@@ -106,9 +106,9 @@ set wildignore+=*.zip,*.tar.gz,*.tar.bz2,*.rar,*.tar.xz
 ""
 
 "" NERDTree
-let NERDTreeIgnore = ['\.DS_Store$', '\.pyc$']
-let NERDTreeMinimalUI=1
-let NERDTreeShowHidden=1
+let NERDTreeIgnore = ['\.DS_Store$', '\.pyc$', '^tags$']
+let NERDTreeMinimalUI = 1
+let NERDTreeShowHidden = 1
 map <leader>n :NERDTreeToggle<CR>
 
 
@@ -116,17 +116,17 @@ map <leader>n :NERDTreeToggle<CR>
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
 "" Solarized plugin
-set background=dark
+set background = dark
 let g:solarized_visibility = "high"
 let g:solarized_contrast = "high"
 let g:solarized_termcolors=16
 colorscheme solarized
 
 "" Airline
-set laststatus=2
+set laststatus = 2
 set noshowmode
 let g:bufferline_echo = 0
-set ttimeoutlen=50
+set ttimeoutlen = 50
 
 "" neocomplcache
 let g:neocomplcache_enable_at_startup = 1
@@ -142,5 +142,5 @@ let g:syntastic_html_tidy_ignore_errors=[" proprietary attribute \"ng-"]
 
 "" ConoLine
 let g:conoline_auto_enable = 1
-let g:conoline_use_colorscheme_default_normal=1
+let g:conoline_use_colorscheme_default_normal = 1
 
