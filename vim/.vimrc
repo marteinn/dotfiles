@@ -112,9 +112,9 @@ set wildignore+=*.zip,*.tar.gz,*.tar.bz2,*.rar,*.tar.xz
 ""
 
 "" NERDTree
-let NERDTreeIgnore = ['\.DS_Store$', '\.pyc$']
-let NERDTreeMinimalUI=1
-let NERDTreeShowHidden=1
+let NERDTreeIgnore = ['\.DS_Store$', '\.pyc$', '^tags$']
+let NERDTreeMinimalUI = 1
+let NERDTreeShowHidden = 1
 map <leader>n :NERDTreeToggle<CR>
 
 
@@ -148,7 +148,7 @@ let g:syntastic_html_tidy_ignore_errors=[" proprietary attribute \"ng-"]
 
 "" ConoLine
 let g:conoline_auto_enable = 1
-let g:conoline_use_colorscheme_default_normal=1
+let g:conoline_use_colorscheme_default_normal = 1
 
 "" Control+p
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
