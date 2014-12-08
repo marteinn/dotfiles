@@ -74,6 +74,7 @@ Bundle 'ap/vim-css-color'
 Bundle 'groenewege/vim-less'
 Bundle 'majutsushi/tagbar'
 Bundle 'miyakogi/conoline.vim'
+Bundle 'mileszs/ack.vim'
 
 
 call vundle#end()
