@@ -110,6 +110,7 @@ let NERDTreeIgnore = ['\.DS_Store$', '\.pyc$', '^tags$']
 let NERDTreeMinimalUI = 1
 let NERDTreeShowHidden = 1
 map <leader>n :NERDTreeToggle<CR>
+let NERDTreeShowLineNumbers = 0
 
 
 " Auto close NT
