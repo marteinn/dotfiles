@@ -97,6 +97,12 @@ set smartcase   " ... unless they contain at least one capital letter
 " Disable output and VCS files
 set wildignore+=*.o,*.out,*.obj,.git,*.rbc,*.rbo,*.class,.svn,*.gem
 
+" Disable images
+set wildignore+=*.png,*.jpg,*.gif
+
+" Disable packages
+set wildignore+=*/node_modules
+
 " Disable archive files
 set wildignore+=*.zip,*.tar.gz,*.tar.bz2,*.rar,*.tar.xz
 
@@ -145,3 +151,5 @@ let g:syntastic_html_tidy_ignore_errors=[" proprietary attribute \"ng-"]
 let g:conoline_auto_enable = 1
 let g:conoline_use_colorscheme_default_normal = 1
 
+"" Control+p
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
