@@ -17,6 +17,7 @@ set noswapfile
 set encoding=utf-8              " Set default encoding to UTF-8
 set tags=./tags,./.tags,tags,.tags;/
 set clipboard=unnamed
+set colorcolumn=80
 
 
 ""
@@ -24,9 +25,11 @@ set clipboard=unnamed
 ""
 
 set smartindent
-set tabstop=4
-set shiftwidth=4
-set expandtab
+set tabstop=4     " a hard TAB displays as 4 columns
+set shiftwidth=4  " operation >> indents 4 columns; << unindents 4 columns
+set expandtab     " insert spaces when hitting TABs
+set softtabstop=4 " insert/delete 4 spaces when hitting a TAB/BACKSPACE
+set shiftround    " round indent to multiple of 'shiftwidth'
 set list                          " Show invisible characters
 set backspace=indent,eol,start  " backspace through everything in insert mode
 
@@ -39,6 +42,14 @@ set listchars+=extends:>          " The character to show in the last column whe
                                   " off and the line continues beyond the right of the screen
 set listchars+=precedes:<         " The character to show in the last column when wrap is
                                   " off and the line continues beyond the left of the screen
+
+
+""
+"" Sessions
+""
+
+let g:PathToSessions = $HOME."/.vim/sessions/"
+
 
 
 ""
@@ -75,6 +86,7 @@ Bundle 'groenewege/vim-less'
 Bundle 'majutsushi/tagbar'
 Bundle 'miyakogi/conoline.vim'
 Bundle 'mileszs/ack.vim'
+Bundle 'mhinz/vim-startify'
 
 
 call vundle#end()
@@ -154,3 +166,8 @@ let g:conoline_use_colorscheme_default_normal = 1
 
 "" Control+p
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
+
+"" Bookmarks (for startify)
+if !empty(glob("~/dotfiles/vim/startify_bookmarks.vim"))
+    source ~/dotfiles/vim/startify_bookmarks.vim
+endif
