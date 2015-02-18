@@ -171,3 +171,22 @@ let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
 if !empty(glob("~/dotfiles/vim/startify_bookmarks.vim"))
     source ~/dotfiles/vim/startify_bookmarks.vim
 endif
+
+
+let g:startify_custom_header = [
+            \ '  ___________________________________    ',
+            \ '/ Always leave the campground cleaner \  ',
+            \ '\ than you found it.                  /  ',
+            \ ' -------------------------------------   ',
+            \ ' \     /\  ___  /\                       ',
+            \ '  \   // \/   \/ \\                      ',
+            \ '     ((    O O    ))                     ',
+            \ '      \\ /     \ //                      ',
+            \ '       \/  | |  \/                       ',
+            \ '        |  | |  |                        ',
+            \ '        |  | |  |                        ',
+            \ '        |   o   |                        ',
+            \ '        | |   | |                        ',
+            \ '        |m|   |m|                        ',
+            \ '',
+            \ ]
