@@ -87,6 +87,7 @@ Bundle 'majutsushi/tagbar'
 Bundle 'miyakogi/conoline.vim'
 Bundle 'mileszs/ack.vim'
 Bundle 'mhinz/vim-startify'
+Bundle 'nvie/vim-flake8'
 
 
 call vundle#end()
@@ -166,6 +167,7 @@ let g:conoline_use_colorscheme_default_normal = 1
 
 "" Control+p
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
+map <c-b> :CtrlPBuffer<CR>
 
 "" Bookmarks (for startify)
 if !empty(glob("~/dotfiles/vim/startify_bookmarks.vim"))
