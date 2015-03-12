@@ -74,10 +74,8 @@ Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-fugitive'
 Bundle 'kien/ctrlp.vim'
 Plugin 'bling/vim-airline'
-Plugin 'bling/vim-bufferline'
 Bundle 'altercation/vim-colors-solarized'
 Plugin 'Lokaltog/vim-easymotion'
-Bundle 'jeetsukumaran/vim-buffergator'
 Bundle 'Shougo/neocomplcache'
 Bundle 'Shougo/neosnippet'
 Bundle 'Shougo/neosnippet-snippets'
@@ -167,7 +165,7 @@ let g:conoline_use_colorscheme_default_normal = 1
 
 "" Control+p
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
-map <c-b> :CtrlPBuffer<CR>
+map <leader>b :CtrlPBuffer<CR>
 
 "" Bookmarks (for startify)
 if !empty(glob("~/dotfiles/vim/startify_bookmarks.vim"))
