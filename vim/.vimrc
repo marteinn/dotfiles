@@ -158,13 +158,14 @@ inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 
 "" Syntastic
 let g:syntastic_html_tidy_ignore_errors=[" proprietary attribute \"ng-"]
+let syntastic_mode_map = { 'passive_filetypes': ['html'] }
 
 "" ConoLine
 let g:conoline_auto_enable = 1
 let g:conoline_use_colorscheme_default_normal = 1
 
 "" Control+p
-let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git|\.pyc$'
 map <leader>b :CtrlPBuffer<CR>
 
 "" Bookmarks (for startify)
@@ -174,19 +175,6 @@ endif
 
 
 let g:startify_custom_header = [
-            \ '  ___________________________________    ',
-            \ '/ Always leave the campground cleaner \  ',
-            \ '\ than you found it.                  /  ',
-            \ ' -------------------------------------   ',
-            \ ' \     /\  ___  /\                       ',
-            \ '  \   // \/   \/ \\                      ',
-            \ '     ((    O O    ))                     ',
-            \ '      \\ /     \ //                      ',
-            \ '       \/  | |  \/                       ',
-            \ '        |  | |  |                        ',
-            \ '        |  | |  |                        ',
-            \ '        |   o   |                        ',
-            \ '        | |   | |                        ',
-            \ '        |m|   |m|                        ',
-            \ '',
+            \ 'Simplicity is prerequisite for reliability.',
+            \ '-------------------------------------------',
             \ ]
