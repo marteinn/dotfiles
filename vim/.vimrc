@@ -165,7 +165,10 @@ let g:conoline_auto_enable = 1
 let g:conoline_use_colorscheme_default_normal = 1
 
 "" Control+p
-let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git|\.pyc$'
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\.git$\|\.idea$\|\.svn$\|node_modules$',
+  \ 'file': '\.pyc$\|\.DS_Store$\|\.DS_Store$'
+  \ }
 map <leader>b :CtrlPBuffer<CR>
 
 "" Bookmarks (for startify)
