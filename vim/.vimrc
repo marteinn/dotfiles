@@ -166,10 +166,15 @@ let g:conoline_use_colorscheme_default_normal = 1
 
 "" Control+p
 let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\.git$\|\.idea$\|\.svn$\|node_modules$',
+  \ 'dir':  '\.git$\|\.idea$\|\.svn$\|node_modules$|venv$|',
   \ 'file': '\.pyc$\|\.DS_Store$\|\.DS_Store$'
   \ }
 map <leader>b :CtrlPBuffer<CR>
+
+""" Easymotion
+hi link EasyMotionTarget NonText
+hi link EasyMotionTarget2First NonText
+hi link EasyMotionTarget2Second NonText
 
 "" Bookmarks (for startify)
 if !empty(glob("~/dotfiles/vim/startify_bookmarks.vim"))
