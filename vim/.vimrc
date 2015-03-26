@@ -7,30 +7,36 @@ filetype off                    " required
 syntax enable                   " Turn on syntax highlighting allowing local overrides
 set t_Co=256
 
-set autoindent
-let mapleader=","
+let mapleader=","               " Remap leader to ,
 set number                      " Show line numbers
 set ruler                       " Show line and column number
-set nobackup
-set nowritebackup
-set noswapfile
+set colorcolumn=80              " Display line at 80 chars
 set encoding=utf-8              " Set default encoding to UTF-8
 set tags=./tags,./.tags,tags,.tags;/
 set clipboard=unnamed
-set colorcolumn=80
 
+set nobackup
+set nowritebackup
+set noswapfile
+
+
+""
+"" Buffers
+""
+map <leader>p <c-^>             " Switch to previous buffer
 
 ""
 "" Whitespace
 ""
 
-set smartindent
-set tabstop=4     " a hard TAB displays as 4 columns
-set shiftwidth=4  " operation >> indents 4 columns; << unindents 4 columns
-set expandtab     " insert spaces when hitting TABs
-set softtabstop=4 " insert/delete 4 spaces when hitting a TAB/BACKSPACE
-set shiftround    " round indent to multiple of 'shiftwidth'
-set list                          " Show invisible characters
+" set smartindent
+set autoindent                  " use previous lines idention
+set tabstop=4                   " a hard TAB displays as 4 columns
+set shiftwidth=4                " operation >> indents 4 columns; << unindents 4 columns
+set expandtab                   " insert spaces when hitting TABs
+set softtabstop=4               " insert/delete 4 spaces when hitting a TAB/BACKSPACE
+set shiftround                  " round indent to multiple of 'shiftwidth'
+set list                        " Show invisible characters
 set backspace=indent,eol,start  " backspace through everything in insert mode
 
 
@@ -130,7 +136,6 @@ let NERDTreeShowHidden = 1
 map <leader>n :NERDTreeToggle<CR>
 let NERDTreeShowLineNumbers = 0
 
-
 " Auto close NT
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
@@ -180,7 +185,6 @@ hi link EasyMotionTarget2Second NonText
 if !empty(glob("~/dotfiles/vim/startify_bookmarks.vim"))
     source ~/dotfiles/vim/startify_bookmarks.vim
 endif
-
 
 let g:startify_custom_header = [
             \ 'Simplicity is prerequisite for reliability.',
