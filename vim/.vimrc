@@ -84,7 +84,6 @@ nnoremap <leader><space> :nohlsearch<CR>
 " highlight last inserted text
 nnoremap gV `[v`]
 
-
 " }}}
 
 
@@ -116,7 +115,6 @@ Bundle 'groenewege/vim-less'
 Bundle 'majutsushi/tagbar'
 Bundle 'miyakogi/conoline.vim'
 Bundle 'mileszs/ack.vim'
-Bundle 'mhinz/vim-startify'
 Bundle 'nvie/vim-flake8'
 
 call vundle#end()
@@ -135,6 +133,7 @@ set wildignore+=*.png,*.jpg,*.gif
 
 " Disable packages
 set wildignore+=*/node_modules
+set wildignore+=*/venv
 
 " Disable archive files
 set wildignore+=*.zip,*.tar.gz,*.tar.bz2,*.rar,*.tar.xz
@@ -204,7 +203,6 @@ let g:syntastic_html_tidy_ignore_errors=[" proprietary attribute \"ng-"]
 let syntastic_mode_map = { 'passive_filetypes': ['html'] }
 
 " }}}
-"
 
 
 " Plugin / ConoLine {{{
@@ -218,7 +216,7 @@ let g:conoline_use_colorscheme_default_normal = 1
 " Plugin / Control+p {{{
 
 let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\.git$\|\.idea$\|\.svn$\|node_modules$|venv$|',
+  \ 'dir':  '\.git$\|\.idea$\|\.svn$\|node_modules$|venv$',
   \ 'file': '\.pyc$\|\.DS_Store$\|\.DS_Store$'
   \ }
 map <leader>b :CtrlPBuffer<CR>
@@ -234,18 +232,5 @@ hi link EasyMotionTarget2Second NonText
 
 " }}}
 
-
-" Plugin / Startify {{{
-
-if !empty(glob("~/dotfiles/vim/startify_bookmarks.vim"))
-    source ~/dotfiles/vim/startify_bookmarks.vim
-endif
-
-let g:startify_custom_header = [
-            \ 'Simplicity is prerequisite for reliability.',
-            \ '-------------------------------------------',
-            \ ]
-
-" }}}
 
 " vim:foldmethod=marker:foldlevel=0
