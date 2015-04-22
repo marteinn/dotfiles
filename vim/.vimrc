@@ -20,6 +20,8 @@ set modelines=1                 " Check for file settings
 set undolevels=1000             " use many muchos levels of undo
 set history=1000                " remember more commands and search history
 
+set wildmenu
+
 " }}}
 
 
