@@ -5,7 +5,9 @@ filetype off                    " required for Vundle
 syntax enable                   " Turn on syntax highlighting allowing local overrides
 set t_Co=256                    " Use 256 colors
 
-let mapleader=","               " Remap leader to ,
+"let mapleader=","               " Remap leader to ,
+let mapleader = "\<Space>"
+
 set encoding=utf-8              " Set default encoding to UTF-8
 set clipboard=unnamed           " Map anonymous register to *
 
@@ -40,6 +42,7 @@ map <leader>p <c-^>             " Switch to previous buffer
 
 " }}}
 
+
 " Whitespace {{{
 
 " set smartindent
@@ -51,7 +54,6 @@ set softtabstop=4               " insert/delete 4 spaces when hitting a TAB/BACK
 set shiftround                  " round indent to multiple of 'shiftwidth'
 set list                        " Show invisible characters
 set backspace=indent,eol,start  " backspace through everything in insert mode
-
 
 " List chars
 set listchars=""                  " Reset the listchars
@@ -72,7 +74,7 @@ set ignorecase  " searches are case insensitive...
 set smartcase   " ... unless they contain at least one capital letter
 
 " turn off search highlight
-nnoremap <leader><space> :nohlsearch<CR>
+nnoremap <leader>s :nohlsearch<CR>
 
 " highlight last inserted text
 nnoremap gV `[v`]
@@ -92,12 +94,20 @@ Plugin 'gmarik/Vundle.vim'
 
 
 " Plugins
+Bundle 'ap/vim-css-color'
 Bundle 'altercation/vim-colors-solarized'
-Bundle 'nvie/vim-flake8'
+Plugin 'bling/vim-airline'
+Plugin 'groenewege/vim-less'
+Plugin 'Lokaltog/vim-easymotion'
 Bundle 'kien/ctrlp.vim'
 Bundle 'scrooloose/syntastic'
 Bundle 'scrooloose/nerdcommenter'
-
+Bundle 'scrooloose/nerdtree'
+Bundle 'tpope/vim-fugitive'
+Bundle 'klen/python-mode'
+Bundle 'davidhalter/jedi-vim'
+Bundle 'Shougo/neocomplcache'
+Bundle "jeetsukumaran/vim-filebeagle"
 
 
 " Close Vundle
@@ -135,6 +145,25 @@ colorscheme solarized
 " }}}
 
 
+" Plugin / Airline {{{
+
+set laststatus=2
+set noshowmode
+let g:bufferline_echo = 0
+set ttimeoutlen=50
+
+" }}}
+
+
+" Plugin / Easymotion {{{
+
+hi link EasyMotionTarget NonText
+hi link EasyMotionTarget2First NonText
+hi link EasyMotionTarget2Second NonText
+
+" }}}
+
+
 " Plugin / Control+p {{{
 
 let g:ctrlp_custom_ignore = {
@@ -160,5 +189,42 @@ let g:syntastic_check_on_wq = 0"
 " Angular
 let g:syntastic_html_tidy_ignore_errors=[" proprietary attribute \"ng-"]
 let syntastic_mode_map = { 'passive_filetypes': ['html'] }
+
+" }}}
+
+
+" Plugin / vim-python {{{
+
+" Dont fold code
+let g:pymode_folding = 0
+
+" Disable quickfix window if lint error occurs
+let g:pymode_lint_cwindow = 0
+
+" Lint with pyflakes and pep8
+let g:pymode_lint_checker = "pyflakes,pep8"
+
+" Use jedi instead for autocomplete
+let g:pymode_rope = 0
+
+" }}}
+
+
+" Plugin / eocomplcache {{{
+
+" Use neocomplcache.
+let g:neocomplcache_enable_at_startup = 1
+
+" <TAB>: completion.
+inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
+
+" }}}
+
+
+" Plugin / Nerdtree {{{
+
+let NERDTreeIgnore = ['\.DS_Store$', '\.pyc$', '^tags$']
+let NERDTreeMinimalUI = 1
+map <leader>n :NERDTreeToggle<CR>
 
 " }}}
