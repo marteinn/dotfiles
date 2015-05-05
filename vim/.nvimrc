@@ -107,7 +107,8 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'klen/python-mode'
 Bundle 'davidhalter/jedi-vim'
 Bundle 'Shougo/neocomplcache'
-Bundle "jeetsukumaran/vim-filebeagle"
+Bundle 'jeetsukumaran/vim-filebeagle'
+Plugin 'rking/ag.vim'
 
 
 " Close Vundle
@@ -177,15 +178,6 @@ map <leader>b :CtrlPBuffer<CR>
 
 " Plugin / Syntastic {{{
 
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0"
-
 " Angular
 let g:syntastic_html_tidy_ignore_errors=[" proprietary attribute \"ng-"]
 let syntastic_mode_map = { 'passive_filetypes': ['html'] }
@@ -200,9 +192,6 @@ let g:pymode_folding = 0
 
 " Disable quickfix window if lint error occurs
 let g:pymode_lint_cwindow = 0
-
-" Lint with pyflakes and pep8
-let g:pymode_lint_checker = "pyflakes,pep8"
 
 " Use jedi instead for autocomplete
 let g:pymode_rope = 0
