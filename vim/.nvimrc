@@ -167,6 +167,16 @@ hi link EasyMotionTarget2Second NonText
 
 " Plugin / Control+p {{{
 
+let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --hidden
+    \ --ignore .git
+    \ --ignore .svn
+    \ --ignore .hg
+    \ --ignore .DS_Store
+    \ --ignore venv
+    \ --ignore node_modules
+    \ --ignore "**/*.pyc"
+    \ -g ""'
+
 let g:ctrlp_custom_ignore = {
   \ 'dir':  '\.git$\|\.idea$\|\.svn$\|node_modules$|venv$',
   \ 'file': '\.pyc$\|\.DS_Store$\|\.DS_Store$'
