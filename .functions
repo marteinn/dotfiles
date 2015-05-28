@@ -23,3 +23,8 @@ function http() {
 function simple_mailserver {
     python -m smtpd -n -c DebuggingServer localhost:1025
 }
+
+# Create new tmux session by folder name
+function tnew {
+    tmux new-session -As `basename $PWD`
+}
