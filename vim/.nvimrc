@@ -206,6 +206,9 @@ let g:pymode_lint_cwindow = 0
 " Use jedi instead for autocomplete
 let g:pymode_rope = 0
 
+" Remap breakpoint
+let g:pymode_breakpoint_bind = '<leader>k'
+
 " }}}
 
 
