@@ -22,6 +22,8 @@ set history=1000                " remember more commands and search history
 
 set tags=./tags,./.tags,tags,.tags;/
 
+set scrolloff=5
+
 " }}}
 
 
