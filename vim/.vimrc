@@ -1,15 +1,15 @@
+" NVim Basic Setup {{{
 
-" Basic Setup {{{
-
-set nocompatible                " be iMproved, required
-filetype off                    " required
+" set nocompatible                " be iMproved, required
+filetype off                    " required for Vundle
 syntax enable                   " Turn on syntax highlighting allowing local overrides
-set t_Co=256
+set t_Co=256                    " Use 256 colors
 
-let mapleader=","               " Remap leader to ,
+"let mapleader=","               " Remap leader to ,
+let mapleader = "\<Space>"
+
 set encoding=utf-8              " Set default encoding to UTF-8
-set tags=./tags,./.tags,tags,.tags;/
-set clipboard=unnamed
+set clipboard=unnamed           " Map anonymous register to *
 
 set number                      " Show line numbers
 set ruler                       " Show line and column number
@@ -20,9 +20,7 @@ set modelines=1                 " Check for file settings
 set undolevels=1000             " use many muchos levels of undo
 set history=1000                " remember more commands and search history
 
-set wildmenu
-
-" }}}
+set tags=./tags,./.tags,tags,.tags;/
 
 
 " Backup {{{
@@ -42,6 +40,7 @@ map <leader>p <c-^>             " Switch to previous buffer
 
 " }}}
 
+
 " Whitespace {{{
 
 " set smartindent
@@ -54,7 +53,6 @@ set shiftround                  " round indent to multiple of 'shiftwidth'
 set list                        " Show invisible characters
 set backspace=indent,eol,start  " backspace through everything in insert mode
 
-
 " List chars
 set listchars=""                  " Reset the listchars
 set listchars=tab:\ \             " a tab should display as "  ", trailing whitespace as "."
@@ -66,13 +64,6 @@ set listchars+=precedes:<         " The character to show in the last column whe
 " }}}
 
 
-" Sessions {{{
-
-let g:PathToSessions = $HOME."/.vim/sessions/"
-
-" }}}
-
-
 " Searching {{{
 
 set hlsearch    " highlight matches
@@ -81,16 +72,18 @@ set ignorecase  " searches are case insensitive...
 set smartcase   " ... unless they contain at least one capital letter
 
 " turn off search highlight
-nnoremap <leader><space> :nohlsearch<CR>
+nnoremap <leader>s :nohlsearch<CR>
 
 " highlight last inserted text
 nnoremap gV `[v`]
+
 
 " }}}
 
 
 " Vundle {{{
 
+filetype off                    " required
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
@@ -99,26 +92,24 @@ Plugin 'gmarik/Vundle.vim'
 
 
 " Plugins
-
-Bundle 'scrooloose/nerdtree'
+Bundle 'ap/vim-css-color'
+Bundle 'altercation/vim-colors-solarized'
+Plugin 'bling/vim-airline'
+Plugin 'groenewege/vim-less'
+Plugin 'Lokaltog/vim-easymotion'
+Bundle 'kien/ctrlp.vim'
 Bundle 'scrooloose/syntastic'
 Bundle 'scrooloose/nerdcommenter'
-Bundle 'tpope/vim-surround'
+Bundle 'scrooloose/nerdtree'
 Bundle 'tpope/vim-fugitive'
-Bundle 'kien/ctrlp.vim'
-Plugin 'bling/vim-airline'
-Bundle 'altercation/vim-colors-solarized'
-Plugin 'Lokaltog/vim-easymotion'
+Bundle 'klen/python-mode'
+Bundle 'davidhalter/jedi-vim'
 Bundle 'Shougo/neocomplcache'
-Bundle 'Shougo/neosnippet'
-Bundle 'Shougo/neosnippet-snippets'
-Bundle 'ap/vim-css-color'
-Bundle 'groenewege/vim-less'
-Bundle 'majutsushi/tagbar'
-Bundle 'miyakogi/conoline.vim'
-Bundle 'mileszs/ack.vim'
-Bundle 'nvie/vim-flake8'
+Bundle 'jeetsukumaran/vim-filebeagle'
+Plugin 'rking/ag.vim'
 
+
+" Close Vundle
 call vundle#end()
 filetype plugin indent on
 
@@ -135,24 +126,9 @@ set wildignore+=*.png,*.jpg,*.gif
 
 " Disable packages
 set wildignore+=*/node_modules
-set wildignore+=*/venv
 
 " Disable archive files
 set wildignore+=*.zip,*.tar.gz,*.tar.bz2,*.rar,*.tar.xz
-
-" }}}
-
-
-" Plugin / NERDTree {{{
-
-let NERDTreeIgnore = ['\.DS_Store$', '\.pyc$', '^tags$']
-let NERDTreeMinimalUI = 1
-let NERDTreeShowHidden = 1
-map <leader>n :NERDTreeToggle<CR>
-let NERDTreeShowLineNumbers = 0
-
-" Auto close NT
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
 " }}}
 
@@ -178,44 +154,26 @@ set ttimeoutlen=50
 " }}}
 
 
-" Plugin / neocomplcache {{{
+" Plugin / Easymotion {{{
 
-let g:neocomplcache_enable_at_startup = 1
-
-" }}}
-
-
-" Plugin / Tagbar {{{
-
-map <leader>rt :TagbarToggle<CR>
-
-" }}}
-
-
-" Plugin / Neocomplcache {{{
-
-inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
-
-" }}}
-
-
-" Plugin / Syntastic {{{
-
-let g:syntastic_html_tidy_ignore_errors=[" proprietary attribute \"ng-"]
-let syntastic_mode_map = { 'passive_filetypes': ['html'] }
-
-" }}}
-
-
-" Plugin / ConoLine {{{
-
-let g:conoline_auto_enable = 1
-let g:conoline_use_colorscheme_default_normal = 1
+hi link EasyMotionTarget NonText
+hi link EasyMotionTarget2First NonText
+hi link EasyMotionTarget2Second NonText
 
 " }}}
 
 
 " Plugin / Control+p {{{
+
+let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --hidden
+    \ --ignore .git
+    \ --ignore .svn
+    \ --ignore .hg
+    \ --ignore .DS_Store
+    \ --ignore venv
+    \ --ignore node_modules
+    \ --ignore "**/*.pyc"
+    \ -g ""'
 
 let g:ctrlp_custom_ignore = {
   \ 'dir':  '\.git$\|\.idea$\|\.svn$\|node_modules$|venv$',
@@ -226,13 +184,44 @@ map <leader>b :CtrlPBuffer<CR>
 " }}}
 
 
-" Plugin / Easymotion {{{
+" Plugin / Syntastic {{{
 
-hi link EasyMotionTarget NonText
-hi link EasyMotionTarget2First NonText
-hi link EasyMotionTarget2Second NonText
+" Angular
+let g:syntastic_html_tidy_ignore_errors=[" proprietary attribute \"ng-"]
+let syntastic_mode_map = { 'passive_filetypes': ['html'] }
 
 " }}}
 
 
-" vim:foldmethod=marker:foldlevel=0
+" Plugin / vim-python {{{
+
+" Dont fold code
+let g:pymode_folding = 0
+
+" Disable quickfix window if lint error occurs
+let g:pymode_lint_cwindow = 0
+
+" Use jedi instead for autocomplete
+let g:pymode_rope = 0
+
+" }}}
+
+
+" Plugin / eocomplcache {{{
+
+" Use neocomplcache.
+let g:neocomplcache_enable_at_startup = 1
+
+" <TAB>: completion.
+inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
+
+" }}}
+
+
+" Plugin / Nerdtree {{{
+
+let NERDTreeIgnore = ['\.DS_Store$', '\.pyc$', '^tags$']
+let NERDTreeMinimalUI = 1
+map <leader>n :NERDTreeToggle<CR>
+
+" }}}
