@@ -2,7 +2,7 @@
 
 " set nocompatible                " be iMproved, required
 filetype off                    " required for Vundle
-syntax enable                   " Turn on syntax highlighting allowing local overrides
+syntax on                       " Turn on syntax highlighting allowing local overrides
 set t_Co=256                    " Use 256 colors
 
 "let mapleader=","               " Remap leader to ,
@@ -14,6 +14,7 @@ set clipboard=unnamed           " Map anonymous register to *
 set number                      " Show line numbers
 set ruler                       " Show line and column number
 set colorcolumn=80              " Display line at 80 chars
+set scrolloff=5
 
 set modelines=1                 " Check for file settings
 
@@ -22,6 +23,13 @@ set history=1000                " remember more commands and search history
 
 set tags=./tags,./.tags,tags,.tags;/
 
+set wildmode=full  " fix wildmeny display in neovim
+
+" Move from the neovim terminal window to somewhere else
+tnoremap <C-h> <C-\><C-n><C-w>h
+tnoremap <C-j> <C-\><C-n><C-w>j
+tnoremap <C-k> <C-\><C-n><C-w>k
+tnoremap <C-l> <C-\><C-n><C-w>l
 " }}}
 
 
@@ -102,7 +110,6 @@ Plugin 'Lokaltog/vim-easymotion'
 Bundle 'kien/ctrlp.vim'
 Bundle 'scrooloose/syntastic'
 Bundle 'scrooloose/nerdcommenter'
-Bundle 'scrooloose/nerdtree'
 Bundle 'tpope/vim-fugitive'
 Bundle 'klen/python-mode'
 Bundle 'davidhalter/jedi-vim'
@@ -152,6 +159,8 @@ set laststatus=2
 set noshowmode
 let g:bufferline_echo = 0
 set ttimeoutlen=50
+let g:airline_left_sep=""
+let g:airline_right_sep=""
 
 " }}}
 
@@ -230,3 +239,4 @@ let NERDTreeMinimalUI = 1
 map <leader>n :NERDTreeToggle<CR>
 
 " }}}
+
