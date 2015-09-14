@@ -26,5 +26,5 @@ function simple_mailserver {
 
 # Create new tmux session by folder name
 function tnew {
-    tmux new-session -As `basename $PWD`
+    tmux new-session -As `(basename $PWD | tr . _)`
 }
