@@ -4,6 +4,7 @@
 
 [mergetool]
     keepBackup = true
+	path = nvim
 
 [alias]
     a = add
@@ -37,3 +38,5 @@
     default = simple
 [merge "ours"]
 	driver = true
+[merge]
+	tool = vimdiff
