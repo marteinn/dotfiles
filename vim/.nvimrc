@@ -32,6 +32,8 @@ tnoremap <C-k> <C-\><C-n><C-w>k
 tnoremap <C-l> <C-\><C-n><C-w>l
 " }}}
 
+nnoremap <CR> :wa<CR>:!!<CR>    " Repeat last command
+
 
 " Backup {{{
 
