@@ -32,7 +32,7 @@ tnoremap <C-k> <C-\><C-n><C-w>k
 tnoremap <C-l> <C-\><C-n><C-w>l
 " }}}
 
-nnoremap <CR> :wa<CR>:!!<CR>    " Repeat last command
+nnoremap <leader><CR> :wa<CR>:!!<CR>    " Repeat last command
 
 
 " Backup {{{
@@ -48,7 +48,8 @@ set writebackup
 
 " Buffers {{{
 
-map <leader>p <c-^>             " Switch to previous buffer
+" map <leader>p <c-^>             " Switch to previous buffer
+nmap <leader>p :e#<CR>
 
 " }}}
 
