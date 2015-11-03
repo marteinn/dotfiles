@@ -32,7 +32,8 @@ tnoremap <C-k> <C-\><C-n><C-w>k
 tnoremap <C-l> <C-\><C-n><C-w>l
 " }}}
 
-nnoremap <leader><CR> :wa<CR>:!!<CR>    " Repeat last command
+" Repeat last command
+nnoremap <leader><CR> :wa<CR>:!!<CR>
 
 
 " Backup {{{
@@ -117,7 +118,6 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'klen/python-mode'
 Bundle 'davidhalter/jedi-vim'
 Bundle 'Shougo/neocomplcache'
-Bundle 'jeetsukumaran/vim-filebeagle'
 Plugin 'rking/ag.vim'
 
 
@@ -127,11 +127,25 @@ filetype plugin indent on
 
 " }}}
 
+" Add the virtualenv's site-packages to vim path
+if has('python')
+py << EOF
+import os.path
+import sys
+import vim
+if 'VIRTUAL_ENV' in os.environ:
+    project_base_dir = os.environ['VIRTUAL_ENV']
+    sys.path.insert(0, project_base_dir)
+    activate_this = os.path.join(project_base_dir, 'bin/activate_this.py')
+    execfile(activate_this, dict(__file__=activate_this))
+EOF
+endif
+
 
 " Wild settings {{{
 
 " Disable output and VCS files
-set wildignore+=*.o,*.out,*.obj,.git,*.rbc,*.rbo,*.class,.svn,*.gem
+set wildignore+=*.o,*.out,*.obj,.git,*.rbc,*.rbo,*.class,.svn,*.gem,*.pyc
 
 " Disable images
 set wildignore+=*.png,*.jpg,*.gif
@@ -235,11 +249,16 @@ inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 " }}}
 
 
-" Plugin / Nerdtree {{{
+" Plugin / Netrw {{{
 
-let NERDTreeIgnore = ['\.DS_Store$', '\.pyc$', '^tags$']
-let NERDTreeMinimalUI = 1
-map <leader>n :NERDTreeToggle<CR>
+" Open netrw on -
+nmap - :Ex<CR>
+
+" Hide header
+let g:netrw_banner=0
+
+" Disable some filetypes per default
+let g:netrw_list_hide='\.pyc$,^\.DS_Store$,\.o$,^\.git/$'
 
 " }}}
 
