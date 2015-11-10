@@ -1,10 +1,10 @@
 [user]
-	name = Martin Sandström
-	email = martin@marteinn.se
+    name = Martin Sandström
+    email = martin@marteinn.se
 
 [mergetool]
     keepBackup = true
-	path = nvim
+    path = nvim
 
 [alias]
     a = add
@@ -38,6 +38,6 @@
 [push]
     default = simple
 [merge "ours"]
-	driver = true
+    driver = true
 [merge]
-	tool = vimdiff
+    tool = vimdiff
