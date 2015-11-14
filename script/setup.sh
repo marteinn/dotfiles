@@ -31,5 +31,6 @@ ln -sf ~/dotfiles/git/.gitignore ~/.gitignore
 
 # vim
 ln -sf ~/dotfiles/vim/.vimrc ~/.vimrc
-ln -sf ~/dotfiles/vim/.nvimrc ~/.nvimrc
+ln -sf ~/dotfiles/vim/.nvimrc ~/.config/nvim/init.vim
+
 
