@@ -119,6 +119,7 @@ Bundle 'klen/python-mode'
 Bundle 'davidhalter/jedi-vim'
 Bundle 'Shougo/neocomplcache'
 Plugin 'rking/ag.vim'
+Plugin 'Yggdroot/indentLine'
 
 
 " Close Vundle
@@ -217,6 +218,7 @@ map <leader>b :CtrlPBuffer<CR>
 " Angular
 let g:syntastic_html_tidy_ignore_errors=[" proprietary attribute \"ng-"]
 let syntastic_mode_map = { 'passive_filetypes': ['html'] }
+let g:syntastic_javascript_checkers = ['eslint']
 
 " }}}
 
