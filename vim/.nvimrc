@@ -102,6 +102,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'ap/vim-css-color'
 Plug 'altercation/vim-colors-solarized'
 Plug 'bling/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'groenewege/vim-less'
 Plug 'Lokaltog/vim-easymotion'
@@ -117,6 +118,7 @@ Plug 'Yggdroot/indentLine'
 " Add plugins to &runtimepath
 call plug#end()
 filetype plugin indent on
+
 
 " }}}
 
