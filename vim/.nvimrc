@@ -1,12 +1,9 @@
 " NVim Basic Setup {{{
 
-" set nocompatible                " be iMproved, required
-filetype off                    " required for Vundle
 syntax on                       " Turn on syntax highlighting allowing local overrides
 set t_Co=256                    " Use 256 colors
 
-"let mapleader=","               " Remap leader to ,
-let mapleader = "\<Space>"
+let mapleader = "\<Space>"      " Remap leader to space
 
 set encoding=utf-8              " Set default encoding to UTF-8
 set clipboard=unnamed           " Map anonymous register to *
@@ -97,35 +94,28 @@ nnoremap gV `[v`]
 " }}}
 
 
-" Vundle {{{
+" Plugins {{{
 
-filetype off                    " required
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-
-" let Vundle manage Vundle, required
-Plugin 'gmarik/Vundle.vim'
-
+call plug#begin('~/.vim/plugged')
 
 " Plugins
-Bundle 'ap/vim-css-color'
-Bundle 'altercation/vim-colors-solarized'
-Plugin 'bling/vim-airline'
-Plugin 'groenewege/vim-less'
-Plugin 'Lokaltog/vim-easymotion'
-Bundle 'kien/ctrlp.vim'
-Bundle 'scrooloose/syntastic'
-Bundle 'scrooloose/nerdcommenter'
-Bundle 'tpope/vim-fugitive'
-Bundle 'klen/python-mode'
-Bundle 'davidhalter/jedi-vim'
-Bundle 'Shougo/neocomplcache'
-Plugin 'rking/ag.vim'
-Plugin 'Yggdroot/indentLine'
+Plug 'ap/vim-css-color'
+Plug 'altercation/vim-colors-solarized'
+Plug 'bling/vim-airline'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'groenewege/vim-less'
+Plug 'Lokaltog/vim-easymotion'
+Plug 'scrooloose/syntastic'
+Plug 'scrooloose/nerdcommenter'
+Plug 'tpope/vim-fugitive'
+Plug 'klen/python-mode', { 'for': 'python' }
+Plug 'davidhalter/jedi-vim', { 'for': 'python' }
+Plug 'Shougo/neocomplcache'
+Plug 'rking/ag.vim'
+Plug 'Yggdroot/indentLine'
 
-
-" Close Vundle
-call vundle#end()
+" Add plugins to &runtimepath
+call plug#end()
 filetype plugin indent on
 
 " }}}
