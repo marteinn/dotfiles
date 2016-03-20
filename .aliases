@@ -11,6 +11,12 @@ fi
 alias gti="git"
 alias gits="git s"
 
+# docker typos
+alias ocker="docker"
+alias docekr="docker"
+alias odkcer="docker"
+alias docekrc="docker"
+
 # start tomcat (with solr)
 alias solr="catalina start"
 
