@@ -1,35 +1,44 @@
 " NVim Basic Setup {{{
 
-syntax on                       " Turn on syntax highlighting allowing local overrides
-set t_Co=256                    " Use 256 colors
+" Turn on syntax highlighting allowing local overrides
+syntax on
 
-let mapleader = "\<Space>"      " Remap leader to space
+" Use 256 colors
+set t_Co=256
 
-set encoding=utf-8              " Set default encoding to UTF-8
-set clipboard=unnamed           " Map anonymous register to *
+" Remap leader to space
+let mapleader = "\<Space>"
 
-set number                      " Show line numbers
-set ruler                       " Show line and column number
-set colorcolumn=80              " Display line at 80 chars
+" Set default encoding to UTF-8
+set encoding=utf-8
+
+" Map anonymous register to *
+set clipboard=unnamed
+"
+" Show line numbers
+set number
+"
+" Show line and column number
+set ruler
+
+" Display line at 80 chars
+set colorcolumn=80
+
 set scrolloff=5
 
-set modelines=1                 " Check for file settings
+" Check for file settings
+set modelines=1
 
-set undolevels=1000             " use many muchos levels of undo
-set history=1000                " remember more commands and search history
+" use many levels of undo
+set undolevels=1000
+
+" remember more commands and search history
+set history=1000
 
 set tags=./tags,./.tags,tags,.tags;/
 
-set scrolloff=5
-
-set wildmode=full  " fix wildmeny display in neovim
-
-" Move from the neovim terminal window to somewhere else
-tnoremap <C-h> <C-\><C-n><C-w>h
-tnoremap <C-j> <C-\><C-n><C-w>j
-tnoremap <C-k> <C-\><C-n><C-w>k
-tnoremap <C-l> <C-\><C-n><C-w>l
-" }}}
+" fix wildmeny display in neovim
+set wildmode=full
 
 " Repeat last command
 nnoremap <leader><CR> :wa<CR>:!!<CR>
@@ -48,7 +57,7 @@ set writebackup
 
 " Buffers {{{
 
-" map <leader>p <c-^>             " Switch to previous buffer
+" Switch to previous buffer
 nmap <leader>p :e#<CR>
 
 " }}}
@@ -101,8 +110,6 @@ call plug#begin('~/.vim/plugged')
 " Plugins
 Plug 'ap/vim-css-color'
 Plug 'altercation/vim-colors-solarized'
-Plug 'bling/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'groenewege/vim-less'
 Plug 'Lokaltog/vim-easymotion'
@@ -113,7 +120,6 @@ Plug 'klen/python-mode', { 'for': 'python' }
 Plug 'davidhalter/jedi-vim', { 'for': 'python' }
 Plug 'Shougo/neocomplcache'
 Plug 'rking/ag.vim'
-Plug 'Yggdroot/indentLine'
 
 " Add plugins to &runtimepath
 call plug#end()
@@ -154,6 +160,20 @@ set wildignore+=*.zip,*.tar.gz,*.tar.bz2,*.rar,*.tar.xz
 " }}}
 
 
+" Statusline settings {{{
+
+" Always show statusline
+set laststatus=2
+
+" Remove escape key delay
+set ttimeoutlen=50
+
+" Update statusline
+let &statusline='%.50f [%{exists("*fugitive#head")?fugitive#head():""}] %r %= %c%V | %y %l/%L'
+
+" }}}
+
+
 " Plugin / Solarized (Colors) {{{
 
 set background=dark
@@ -161,18 +181,6 @@ let g:solarized_visibility = "high"
 let g:solarized_contrast = "high"
 let g:solarized_termcolors=16
 colorscheme solarized
-
-" }}}
-
-
-" Plugin / Airline {{{
-
-set laststatus=2
-set noshowmode
-let g:bufferline_echo = 0
-set ttimeoutlen=50
-let g:airline_left_sep=""
-let g:airline_right_sep=""
 
 " }}}
 
