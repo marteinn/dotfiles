@@ -95,7 +95,6 @@ Plugin 'gmarik/Vundle.vim'
 " Plugins
 Bundle 'ap/vim-css-color'
 Bundle 'altercation/vim-colors-solarized'
-Plugin 'bling/vim-airline'
 Plugin 'groenewege/vim-less'
 Plugin 'Lokaltog/vim-easymotion'
 Bundle 'kien/ctrlp.vim'
@@ -134,6 +133,20 @@ set wildignore+=*.zip,*.tar.gz,*.tar.bz2,*.rar,*.tar.xz
 " }}}
 
 
+" Statusline settings {{{
+
+" Always show statusline
+set laststatus=2
+
+" Remove escape key delay
+set ttimeoutlen=50
+
+" Update statusline
+let &statusline='%.50f [%{exists("*fugitive#head")?fugitive#head():""}] %r %= %c%V | %y %l/%L'
+
+" }}}
+
+
 " Plugin / Solarized (Colors) {{{
 
 set background=dark
@@ -141,16 +154,6 @@ let g:solarized_visibility = "high"
 let g:solarized_contrast = "high"
 let g:solarized_termcolors=16
 colorscheme solarized
-
-" }}}
-
-
-" Plugin / Airline {{{
-
-set laststatus=2
-set noshowmode
-let g:bufferline_echo = 0
-set ttimeoutlen=50
 
 " }}}
 
