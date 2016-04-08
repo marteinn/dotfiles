@@ -17,12 +17,21 @@
     l = git log --name-status
     lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
     undo = reset --soft HEAD~1
-    au = !"git status --porcelain | awk '/\\?\\?/{ print $2 }' | xargs git add" # Add untracked files
+
+    # Add untracked files
+    au = !"git status --porcelain | awk '/\\?\\?/{ print $2 }' | xargs git add"
+
     d = diff --color-words --ignore-space-at-eol -b -w
     dh = diff --color-words --ignore-space-at-eol -b -w head
     t = tag -n
+    ta = tag --sort=v:refname
     s = status -s
-    restore-file = !git checkout $(git rev-list -n 1 HEAD -- "$1")^ -- "$1" # Restore deleted file
+
+    # Restore deleted file
+    restore-file = !git checkout $(git rev-list -n 1 HEAD -- "$1")^ -- "$1"
+
+    # Show changed files in commit
+    show-files = diff-tree --no-commit-id --name-only -r
 
     master = checkout master
     develop = checkout develop
