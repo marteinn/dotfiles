@@ -120,6 +120,8 @@ Plug 'klen/python-mode', { 'for': 'python' }
 Plug 'davidhalter/jedi-vim', { 'for': 'python' }
 Plug 'Shougo/neocomplcache'
 Plug 'rking/ag.vim'
+Plug 'wfleming/vim-codeclimate'
+
 
 " Add plugins to &runtimepath
 call plug#end()
@@ -267,3 +269,8 @@ let g:netrw_list_hide='\.pyc$,^\.DS_Store$,\.o$,^\.git/$'
 
 " }}}
 
+" "Plugin / CodeClimate {{{
+nmap <Leader>aa :CodeClimateAnalyzeProject<CR>
+nmap <Leader>ao :CodeClimateAnalyzeOpenFiles<CR>
+nmap <Leader>af :CodeClimateAnalyzeCurrentFile<CR>
+" " }}}
