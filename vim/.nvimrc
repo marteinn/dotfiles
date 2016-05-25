@@ -190,6 +190,7 @@ colorscheme solarized
 hi link EasyMotionTarget NonText
 hi link EasyMotionTarget2First NonText
 hi link EasyMotionTarget2Second NonText
+let g:EasyMotion_keys = 'qwertyuiopåasdfghjklöäzxcvbnm'
 
 " }}}
 
