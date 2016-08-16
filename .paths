@@ -1,18 +1,2 @@
 export PATH=$HOME/bin:$PATH
 export PATH=/usr/local/bin:$PATH
-
-# npm
-export PATH=/usr/local/share/npm/bin:$PATH
-
-# postgres
-if [ -x /Applications/Postgres93.app ]; then
-    export PATH=/Applications/Postgres93.app/Contents/MacOS/bin:$PATH
-else
-    export PATH=/Applications/Postgres.app/Contents/MacOS/bin:$PATH
-fi
-
-# php
-[ -n "$PS1" ] && source ~/dotfiles/php/.paths
-
-# ruby
-[ -n "$PS1" ] && source ~/dotfiles/ruby/.paths

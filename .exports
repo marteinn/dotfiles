@@ -16,6 +16,3 @@ export HISTCONTROL=ignoredups
 
 # Make some commands not show up in history
 export HISTIGNORE="ls:ls *:cd:cd -:pwd;exit:date:* --help"
-
-[ -n "$PS1" ] && source ~/dotfiles/php/.exports
-[ -n "$PS1" ] && source ~/dotfiles/ruby/.exports

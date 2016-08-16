@@ -1,9 +1,0 @@
-# mamp
-export PATH=/Applications/MAMP/bin/php/php5.5.3/bin:$PATH
-export PATH=/Applications/MAMP/Library/bin:$PATH
-
-# composer (php)
-export PATH=$HOME/.composer/bin:$PATH
-
-# Expose global composer installs
-export PATH=$HOME/.composer/vendor/bin:$PATH

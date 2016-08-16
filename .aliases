@@ -16,11 +16,3 @@ alias ocker="docker"
 alias docekr="docker"
 alias odkcer="docker"
 alias docekrc="docker"
-
-# start tomcat (with solr)
-alias solr="catalina start"
-
-# get computer ip (http://stackoverflow.com/a/13322549)
-alias myip="ifconfig | sed -En 's/127.0.0.1//;s/.*inet (addr:)?(([0-9]*\.){3}[0-9]*).*/\2/p'"
-
-[ -n "$PS1" ] && source ~/dotfiles/xcode/.aliases

@@ -1,2 +1,0 @@
-# wp-cli (composer app)
-export WP_CLI_PHP=/Applications/MAMP/bin/php/php5.5.3/bin/php
