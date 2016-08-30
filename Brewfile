@@ -23,6 +23,7 @@ brew 'siege'
 brew 'tree'
 brew 'zsh'
 
+cask 'amethyst'
 cask 'bartender'
 cask 'dropbox'
 cask 'docker-toolbox'
