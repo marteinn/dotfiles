@@ -32,6 +32,7 @@ cask 'firefoxdeveloperedition'
 cask 'google-chrome'
 cask 'iterm2'
 cask 'macvim' # this breaks
+cask 'monodraw'
 cask 'seil'
 cask 'slack'
 cask 'spotify'
