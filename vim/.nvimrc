@@ -121,6 +121,7 @@ Plug 'davidhalter/jedi-vim', { 'for': 'python' }
 Plug 'Shougo/neocomplcache'
 Plug 'rking/ag.vim'
 Plug 'wfleming/vim-codeclimate'
+Plug 'SirVer/ultisnips'
 
 
 " Add plugins to &runtimepath
@@ -270,7 +271,22 @@ let g:netrw_list_hide='\.pyc$,^\.DS_Store$,\.o$,^\.git/$'
 " }}}
 
 " "Plugin / CodeClimate {{{
+
 nmap <Leader>aa :CodeClimateAnalyzeProject<CR>
 nmap <Leader>ao :CodeClimateAnalyzeOpenFiles<CR>
 nmap <Leader>af :CodeClimateAnalyzeCurrentFile<CR>
+
+" " }}}
+
+
+" "Plugin / CodeClimate {{{
+
+let g:UltiSnipsExpandTrigger='<c-j>'
+let g:UltiSnipsJumpForwardTrigger='<c-j>'
+let g:UltiSnipsJumpBackwardTrigger='<c-k>'
+let g:UltiSnipsEditSplit='vertical'
+
+set runtimepath+=~/dotfiles/snippets/
+let g:UltiSnipsSnippetsDir='~/dotfiles/snippets/UltiSnips/'
+
 " " }}}

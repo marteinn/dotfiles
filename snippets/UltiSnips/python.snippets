@@ -1,0 +1,19 @@
+#! header
+snippet #! "Shebang header for python scripts" b
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+$0
+endsnippet
+
+
+snippet unittest_django
+from django.test import TestCase
+
+
+class $1Case(TestCase):
+    def setUp(self):
+        pass
+
+    def test_$2(self):
+        self.assertEqual(1, 1)
+endsnippet
