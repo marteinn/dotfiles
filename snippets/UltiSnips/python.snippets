@@ -6,7 +6,7 @@ $0
 endsnippet
 
 
-snippet unittest_django
+snippet django_unittest
 from django.test import TestCase
 
 
@@ -16,4 +16,26 @@ class $1Case(TestCase):
 
     def test_$2(self):
         self.assertEqual(1, 1)
+endsnippet
+
+snippet django_command
+from django.test import Client
+from django.core.management.base import BaseCommand
+
+
+class Command(BaseCommand):
+    '''
+    Usage:
+        python manage.py $1
+    '''
+
+    help = '$2'
+
+    def add_arguments(self, parser):
+        parser.add_argument('--$3', type=int, default=123)
+
+    def handle(self, *args, **options):
+        $3 = options['$3']
+        $0
+        self.stdout.write('Hello from $1')
 endsnippet
