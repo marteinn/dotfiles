@@ -5,7 +5,10 @@ ln -sf ~/dotfiles/.paths ~/.paths
 ln -sf ~/dotfiles/.aliases ~/.aliases
 ln -sf ~/dotfiles/.exports ~/.exports
 ln -sf ~/dotfiles/.functions ~/.functions
+
+# zsh / zepto
 ln -sf ~/dotfiles/.zshrc ~/.zshrc
+ln -sf ~/dotfiles/.zpreztorc ~/.zpreztorc
 
 ln -sf ~/dotfiles/bin ~/bin
 
