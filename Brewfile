@@ -11,16 +11,18 @@ brew 'git'
 brew 'git-flow-avh'
 brew 'go'
 brew 'neovim/neovim/neovim'
-brew 'python'
-brew 'python3'
-brew 'the_silver_searcher'
-brew 'tmux'
-brew 'reattach-to-user-namespace'
 brew 'node'
 brew 'npm'
 brew 'nvm'
+brew 'python'
+brew 'python3'
+brew 'reattach-to-user-namespace'
 brew 'ruby'
 brew 'siege'
+brew 'sqlite'
+brew 'ssh-copy-id'
+brew 'the_silver_searcher'
+brew 'tmux'
 brew 'tree'
 brew 'zsh'
 
@@ -31,10 +33,15 @@ cask 'docker-toolbox'
 cask 'firefoxdeveloperedition'
 cask 'google-chrome'
 cask 'iterm2'
-cask 'macvim' # this breaks
 cask 'monodraw'
 cask 'seil'
 cask 'slack'
 cask 'spotify'
 cask 'sublime-text'
 cask 'virtualbox'
+
+# TODO: missing
+# hex friend
+# macvim
+# self control
+
