@@ -24,6 +24,7 @@ brew 'ssh-copy-id'
 brew 'the_silver_searcher'
 brew 'tmux'
 brew 'tree'
+brew 'wget'
 brew 'zsh'
 
 cask 'amethyst'
@@ -39,6 +40,7 @@ cask 'slack'
 cask 'spotify'
 cask 'sublime-text'
 cask 'virtualbox'
+cask 'android-studio'
 
 # TODO: missing
 # hex friend
