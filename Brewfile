@@ -49,4 +49,3 @@ cask 'android-studio'
 # hex friend
 # macvim
 # self control
-
