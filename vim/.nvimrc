@@ -119,7 +119,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'klen/python-mode', { 'for': 'python' }
 Plug 'davidhalter/jedi-vim', { 'for': 'python' }
 Plug 'Shougo/neocomplcache'
-Plug 'rking/ag.vim'
+Plug 'mileszs/ack.vim'
 Plug 'wfleming/vim-codeclimate'
 Plug 'SirVer/ultisnips'
 Plug 'elixir-lang/vim-elixir'
@@ -186,6 +186,17 @@ let g:solarized_visibility = "high"
 let g:solarized_contrast = "high"
 let g:solarized_termcolors=16
 colorscheme solarized
+
+" }}}
+
+
+" Plguin / ack.vim {{{
+
+let g:ackprg = 'ag --vimgrep --smart-case'
+cnoreabbrev ag Ack
+cnoreabbrev aG Ack
+cnoreabbrev Ag Ack
+cnoreabbrev AG Ack
 
 " }}}
 
@@ -271,6 +282,7 @@ let g:netrw_banner=0
 let g:netrw_list_hide='\.pyc$,^\.DS_Store$,\.o$,^\.git/$'
 
 " }}}
+
 
 " "Plugin / CodeClimate {{{
 
