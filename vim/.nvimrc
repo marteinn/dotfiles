@@ -102,6 +102,8 @@ nnoremap gV `[v`]
 
 " }}}
 
+" Detect project defined vim settings
+silent! so .vimlocal
 
 " Plugins {{{
 
