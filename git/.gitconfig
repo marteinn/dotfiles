@@ -23,8 +23,13 @@
 
     d = diff --color-words --ignore-space-at-eol -b -w
     dh = diff --color-words --ignore-space-at-eol -b -w head
+
+    # Show tags with first comment
     t = tag -n
+
+    # semver friendly tag sorting
     ta = tag --sort=v:refname
+
     s = status -s
 
     # Restore deleted file
@@ -46,7 +51,12 @@
 
 [push]
     default = simple
+
 [merge "ours"]
     driver = true
+
 [merge]
     tool = vimdiff
+
+[status]
+    showUntrackedFiles = all
