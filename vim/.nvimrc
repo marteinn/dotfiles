@@ -133,6 +133,7 @@ Plug 'wfleming/vim-codeclimate'
 Plug 'SirVer/ultisnips'
 Plug 'elixir-lang/vim-elixir'
 Plug 'pangloss/vim-javascript'
+Plug 'editorconfig/editorconfig-vim'
 
 
 " Add plugins to &runtimepath
