@@ -134,6 +134,7 @@ Plug 'SirVer/ultisnips'
 Plug 'elixir-lang/vim-elixir'
 Plug 'pangloss/vim-javascript'
 Plug 'editorconfig/editorconfig-vim'
+Plug 'chr4/nginx.vim'
 
 
 " Add plugins to &runtimepath
@@ -303,7 +304,7 @@ nmap <Leader>af :CodeClimateAnalyzeCurrentFile<CR>
 " " }}}
 
 
-" "Plugin / CodeClimate {{{
+" "Plugin / UltiSnips{{{
 
 let g:UltiSnipsExpandTrigger='<c-j>'
 let g:UltiSnipsJumpForwardTrigger='<c-j>'
