@@ -28,7 +28,7 @@
     t = tag -n
 
     # semver friendly tag sorting
-    ta = tag --sort=v:refname
+    ta = tag --sort=v:refname -n
 
     s = status -s
 
