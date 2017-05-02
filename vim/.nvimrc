@@ -24,6 +24,7 @@ set ruler
 " Display line at 80 chars
 set colorcolumn=80
 
+" Always show lines below the marked line
 set scrolloff=5
 
 " Check for file settings
@@ -42,6 +43,9 @@ set wildmode=full
 
 " Repeat last command
 nnoremap <leader><CR> :wa<CR>:!!<CR>
+
+" Enable inccommand
+set inccommand=nosplit
 
 
 " Backup {{{
@@ -127,7 +131,7 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'tpope/vim-fugitive'
 Plug 'klen/python-mode', { 'for': 'python' }
 Plug 'davidhalter/jedi-vim', { 'for': 'python' }
-Plug 'Shougo/neocomplcache'
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'mileszs/ack.vim'
 Plug 'wfleming/vim-codeclimate'
 Plug 'SirVer/ultisnips'
@@ -270,17 +274,6 @@ let g:pymode_breakpoint_bind = '<leader>k'
 " }}}
 
 
-" Plugin / eocomplcache {{{
-
-" Use neocomplcache.
-let g:neocomplcache_enable_at_startup = 1
-
-" <TAB>: completion.
-inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
-
-" }}}
-
-
 " Plugin / Netrw {{{
 
 " Open netrw on -
@@ -304,7 +297,7 @@ nmap <Leader>af :CodeClimateAnalyzeCurrentFile<CR>
 " " }}}
 
 
-" "Plugin / UltiSnips{{{
+" Plugin / UltiSnips{{{
 
 let g:UltiSnipsExpandTrigger='<c-j>'
 let g:UltiSnipsJumpForwardTrigger='<c-j>'
@@ -313,5 +306,19 @@ let g:UltiSnipsEditSplit='vertical'
 
 set runtimepath+=~/dotfiles/snippets/
 let g:UltiSnipsSnippetsDir='~/dotfiles/snippets/UltiSnips/'
+
+" " }}}
+
+
+" Plugin / deoplete {{{
+
+" Activate deoplete on startup
+let g:deoplete#enable_at_startup = 1
+
+" Enable utilsnips in deoplete
+call deoplete#custom#set('ultisnips', 'matchers', ['matcher_fuzzy'])
+
+" <TAB>: completion.
+inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 
 " " }}}
