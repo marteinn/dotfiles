@@ -16,3 +16,6 @@ alias ocker="docker"
 alias docekr="docker"
 alias odkcer="docker"
 alias docekrc="docker"
+
+# composer alias
+alias dc="docker-compose"
