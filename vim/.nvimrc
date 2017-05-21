@@ -15,9 +15,10 @@ set encoding=utf-8
 " Map anonymous register to *
 set clipboard=unnamed
 "
-" Show line numbers
+" Use hybrid line mode
+set relativenumber
 set number
-"
+
 " Show line and column number
 set ruler
 
