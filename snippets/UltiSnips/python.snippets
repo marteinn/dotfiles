@@ -39,3 +39,30 @@ class Command(BaseCommand):
         $0
         self.stdout.write('Hello from $1')
 endsnippet
+
+
+snippet django_orm_or
+from django.db.models import Q
+
+Item.objects.filter(Q(creator=owner) | Q(moderated=False))
+endsnippet
+
+
+
+snippet django_model_admin
+from django.contrib import admin
+
+from MYAPP.models import $1
+
+
+class $1Admin(admin.ModelAdmin):
+    list_display = ('title', '...')
+    list_filter = ('title',)
+    search_fields = ('title',)
+
+
+    class Meta:
+        model = $1
+
+admin.site.register($1, $1Admin)
+endsnippet
