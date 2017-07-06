@@ -1,5 +1,8 @@
 " NVim Basic Setup {{{
 
+" be iMproved, required
+set nocompatible
+
 " Turn on syntax highlighting allowing local overrides
 syntax on
 
@@ -45,8 +48,10 @@ set wildmode=full
 " Repeat last command
 nnoremap <leader><CR> :wa<CR>:!!<CR>
 
-" Enable inccommand
-set inccommand=nosplit
+if has("nvim")
+    " Enable inccommand
+    set inccommand=nosplit
+endif
 
 
 " Backup {{{
@@ -130,9 +135,10 @@ Plug 'Lokaltog/vim-easymotion'
 Plug 'scrooloose/syntastic'
 Plug 'scrooloose/nerdcommenter'
 Plug 'tpope/vim-fugitive'
-Plug 'klen/python-mode', { 'for': 'python' }
 Plug 'davidhalter/jedi-vim', { 'for': 'python' }
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+if has("nvim")
+    Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+endif
 Plug 'mileszs/ack.vim'
 Plug 'wfleming/vim-codeclimate'
 Plug 'SirVer/ultisnips'
@@ -254,23 +260,15 @@ map <leader>b :CtrlPBuffer<CR>
 let g:syntastic_html_tidy_ignore_errors=[" proprietary attribute \"ng-"]
 let syntastic_mode_map = { 'passive_filetypes': ['html'] }
 let g:syntastic_javascript_checkers = ['eslint']
+let g:syntastic_python_checkers = ['flake8']
 
 " }}}
 
 
-" Plugin / vim-python {{{
+" Plugin / vim-jedi {{{
 
-" Dont fold code
-let g:pymode_folding = 0
-
-" Disable quickfix window if lint error occurs
-let g:pymode_lint_cwindow = 0
-
-" Use jedi instead for autocomplete
-let g:pymode_rope = 0
-
-" Remap breakpoint
-let g:pymode_breakpoint_bind = '<leader>k'
+" Show documentation
+let g:jedi#documentation_command = "<leader>m"
 
 " }}}
 
@@ -312,14 +310,16 @@ let g:UltiSnipsSnippetsDir='~/dotfiles/snippets/UltiSnips/'
 
 
 " Plugin / deoplete {{{
+if has("nvim")
 
-" Activate deoplete on startup
-let g:deoplete#enable_at_startup = 1
+    " Activate deoplete on startup
+    let g:deoplete#enable_at_startup = 1
 
-" Enable utilsnips in deoplete
-call deoplete#custom#set('ultisnips', 'matchers', ['matcher_fuzzy'])
+    " Enable utilsnips in deoplete
+    call deoplete#custom#set('ultisnips', 'matchers', ['matcher_fuzzy'])
 
-" <TAB>: completion.
-inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
+    " <TAB>: completion.
+    inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 
+endif
 " " }}}

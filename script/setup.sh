@@ -29,6 +29,6 @@ ln -sf ~/dotfiles/git/.gitconfig ~/.gitconfig
 ln -sf ~/dotfiles/git/.gitignore ~/.gitignore
 
 # vim
-ln -sf ~/dotfiles/vim/.vimrc ~/.vimrc
+ln -sf ~/dotfiles/vim/.nvimrc ~/.vimrc
 mkdir -p ~/.config/nvim
 ln -sf ~/dotfiles/vim/.nvimrc ~/.config/nvim/init.vim
