@@ -1,11 +1,25 @@
 ## Install
 
-	cd $HOME
-	git clone git@github.com:marteinn/dotfiles.git
+- Clone repo
+    ```
+    cd ~ && git clone git@github.com:marteinn/dotfiles.git
+    ```
 
-## Setup
+- Setup files
+    ```
+    source $HOME/dotfiles/script/setup.sh
+    ```
 
-	source $HOME/dotfiles/script/setup.sh
+- Install prezto
+    ```
+    git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
+    ```
+
+- Make zsh default shell
+    ```
+    chsh -s /bin/zsh
+    ```
+
 
 ## Inspiration from:
 
