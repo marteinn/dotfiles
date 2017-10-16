@@ -43,7 +43,7 @@ cask 'reactotron'
 cask 'selfcontrol'
 cask 'slack'
 cask 'spotify'
-cask 'virtualbox'
+# cask 'virtualbox'
 cask 'android-studio'
 
 # TODO: missing
