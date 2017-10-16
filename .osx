@@ -1,8 +1,20 @@
-# Show full path in finder title
+# Disable Notification Center and remove the menu bar icon
+launchctl unload -w /System/Library/LaunchAgents/com.apple.notificationcenterui.plist 2> /dev/null
+
+# Finder: Show full path in finder title
 defaults write com.apple.finder _FXShowPosixPathInTitle -bool YES
 
-# Show hidden files
+# Finder: Show hidden files
 defaults write com.apple.finder AppleShowAllFiles YES
 
-# Hide desktop icons
+# Finder: Hide desktop icons
 defaults write com.apple.finder CreateDesktop false
+
+# Disable “natural” (Lion-style) scrolling
+defaults write NSGlobalDomain com.apple.swipescrolldirection -bool false
+
+# Finder: show status bar
+defaults write com.apple.finder ShowStatusBar -bool true
+
+# Finder: show all filename extensions
+defaults write NSGlobalDomain AppleShowAllExtensions -bool true
