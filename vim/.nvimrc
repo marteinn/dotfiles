@@ -276,7 +276,7 @@ let g:jedi#documentation_command = "<leader>m"
 " Plugin / Netrw {{{
 
 " Open netrw on -
-nmap - :Ex<CR>
+nmap - :Explore<CR>
 
 " Hide header
 let g:netrw_banner=0
