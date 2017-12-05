@@ -22,3 +22,10 @@ function simple_mailserver {
 function tnew {
     tmux new-session -As `(basename $PWD | tr . _)`
 }
+
+# Initialize nvm
+function nvm_session() {
+    export NVM_DIR=~/.nvm
+    source $(brew --prefix nvm)/nvm.sh
+}
+
