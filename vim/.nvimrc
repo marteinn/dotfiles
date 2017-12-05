@@ -139,6 +139,7 @@ Plug 'davidhalter/jedi-vim', { 'for': 'python' }
 if has("nvim")
     Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 endif
+Plug 'machakann/vim-highlightedyank'
 Plug 'mileszs/ack.vim'
 Plug 'wfleming/vim-codeclimate'
 Plug 'SirVer/ultisnips'
