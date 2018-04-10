@@ -6,6 +6,7 @@ tap 'caskroom/cask'
 tap 'caskroom/versions'
 
 brew 'elixir'
+brew 'elm'
 brew 'git'
 brew 'git-flow-avh'
 brew 'go'

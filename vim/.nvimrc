@@ -148,6 +148,7 @@ Plug 'pangloss/vim-javascript'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'chr4/nginx.vim'
 Plug 'slashmili/alchemist.vim'
+Plug 'elmcast/elm-vim'
 
 
 " Add plugins to &runtimepath
