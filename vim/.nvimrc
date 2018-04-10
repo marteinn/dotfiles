@@ -135,6 +135,7 @@ Plug 'Lokaltog/vim-easymotion'
 Plug 'scrooloose/syntastic'
 Plug 'scrooloose/nerdcommenter'
 Plug 'tpope/vim-fugitive'
+Plug 'python-mode/python-mode', { 'branch': 'develop' }
 Plug 'davidhalter/jedi-vim', { 'for': 'python' }
 if has("nvim")
     Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
@@ -266,6 +267,14 @@ let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_python_checkers = ['flake8']
 
 " }}}
+"
+"
+" Plugin / python-mode {{{
+
+let g:pymode_python='python3'
+let g:pymode_folding = 0
+
+" }}}
 
 
 " Plugin / vim-jedi {{{
@@ -299,7 +308,7 @@ nmap <Leader>af :CodeClimateAnalyzeCurrentFile<CR>
 " " }}}
 
 
-" Plugin / UltiSnips{{{
+" Plugin / UltiSnips {{{
 
 let g:UltiSnipsExpandTrigger='<c-j>'
 let g:UltiSnipsJumpForwardTrigger='<c-j>'
