@@ -146,6 +146,7 @@ Plug 'wfleming/vim-codeclimate'
 Plug 'SirVer/ultisnips'
 Plug 'elixir-lang/vim-elixir'
 Plug 'pangloss/vim-javascript'
+Plug 'mxw/vim-jsx'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'chr4/nginx.vim'
 Plug 'slashmili/alchemist.vim'
@@ -328,7 +329,7 @@ if has("nvim")
     let g:deoplete#enable_at_startup = 1
 
     " Enable utilsnips in deoplete
-    call deoplete#custom#set('ultisnips', 'matchers', ['matcher_fuzzy'])
+    call deoplete#custom#source('ultisnips', 'matchers', ['matcher_fuzzy'])
 
     " <TAB>: completion.
     inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
