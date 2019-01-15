@@ -151,6 +151,9 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'chr4/nginx.vim'
 Plug 'slashmili/alchemist.vim'
 Plug 'elmcast/elm-vim'
+Plug 'leafgarland/typescript-vim'
+Plug 'raichoo/purescript-vim'
+Plug 'manicmaniac/coconut.vim'
 
 
 " Add plugins to &runtimepath
@@ -266,13 +269,13 @@ let g:netrw_list_hide='\.pyc$,^\.DS_Store$,\.o$,^\.git/$'
 " }}}
 
 
-" "Plugin / CodeClimate {{{
+" Plugin / CodeClimate {{{
 
 nmap <Leader>aa :CodeClimateAnalyzeProject<CR>
 nmap <Leader>ao :CodeClimateAnalyzeOpenFiles<CR>
 nmap <Leader>af :CodeClimateAnalyzeCurrentFile<CR>
 
-" " }}}
+" }}}
 
 
 " Plugin / UltiSnips {{{
@@ -285,7 +288,7 @@ let g:UltiSnipsEditSplit='vertical'
 set runtimepath+=~/dotfiles/snippets/
 let g:UltiSnipsSnippetsDir='~/dotfiles/snippets/UltiSnips/'
 
-" " }}}
+" }}}
 
 
 " Plugin / deoplete {{{
