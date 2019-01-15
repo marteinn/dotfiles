@@ -229,8 +229,6 @@ let g:EasyMotion_keys = 'qwertyuiopåasdfghjklöäzxcvbnm'
 
 " Plugin / Syntastic {{{
 
-" Angular
-let g:syntastic_html_tidy_ignore_errors=[" proprietary attribute \"ng-"]
 let syntastic_mode_map = { 'passive_filetypes': ['html'] }
 let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_python_checkers = ['flake8']
