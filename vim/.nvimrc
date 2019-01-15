@@ -129,7 +129,8 @@ call plug#begin('~/.vim/plugged')
 " Plugins
 Plug 'ap/vim-css-color'
 Plug 'altercation/vim-colors-solarized'
-Plug 'ctrlpvim/ctrlp.vim'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
 Plug 'groenewege/vim-less'
 Plug 'Lokaltog/vim-easymotion'
 Plug 'scrooloose/syntastic'
@@ -141,7 +142,6 @@ if has("nvim")
     Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 endif
 Plug 'machakann/vim-highlightedyank'
-Plug 'mileszs/ack.vim'
 Plug 'wfleming/vim-codeclimate'
 Plug 'SirVer/ultisnips'
 Plug 'elixir-lang/vim-elixir'
@@ -217,44 +217,12 @@ colorscheme solarized
 " }}}
 
 
-" Plguin / ack.vim {{{
-
-let g:ackprg = 'ag --vimgrep --smart-case'
-cnoreabbrev ag Ack
-cnoreabbrev aG Ack
-cnoreabbrev Ag Ack
-cnoreabbrev AG Ack
-
-" }}}
-
-
 " Plugin / Easymotion {{{
 
 hi link EasyMotionTarget NonText
 hi link EasyMotionTarget2First NonText
 hi link EasyMotionTarget2Second NonText
 let g:EasyMotion_keys = 'qwertyuiopåasdfghjklöäzxcvbnm'
-
-" }}}
-
-
-" Plugin / Control+p {{{
-
-let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --hidden
-    \ --ignore .git
-    \ --ignore .svn
-    \ --ignore .hg
-    \ --ignore .DS_Store
-    \ --ignore venv
-    \ --ignore node_modules
-    \ --ignore "**/*.pyc"
-    \ -g ""'
-
-let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\.git$\|\.idea$\|\.svn$\|node_modules$|venv$',
-  \ 'file': '\.pyc$\|\.DS_Store$\|\.DS_Store$'
-  \ }
-map <leader>b :CtrlPBuffer<CR>
 
 " }}}
 
@@ -268,8 +236,8 @@ let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_python_checkers = ['flake8']
 
 " }}}
-"
-"
+
+
 " Plugin / python-mode {{{
 
 let g:pymode_python='python3'
@@ -335,4 +303,14 @@ if has("nvim")
     inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 
 endif
-" " }}}
+" }}}
+
+
+" Plugin / fzf {{{
+"
+let g:fzf_nvim_statusline=0
+let g:fzf_files_options='--preview "cat {}"'
+nnoremap <silent> <c-p> :Files<CR>
+nnoremap <silent> <leader>b :Buffers<CR>
+nnoremap <silent> <leader>f :Ag<CR>
+" }}}
