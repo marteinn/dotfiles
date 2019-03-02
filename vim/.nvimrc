@@ -143,7 +143,6 @@ if has("nvim")
 endif
 Plug 'machakann/vim-highlightedyank'
 Plug 'wfleming/vim-codeclimate'
-Plug 'SirVer/ultisnips'
 Plug 'elixir-lang/vim-elixir'
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
@@ -278,27 +277,11 @@ nmap <Leader>af :CodeClimateAnalyzeCurrentFile<CR>
 " }}}
 
 
-" Plugin / UltiSnips {{{
-
-let g:UltiSnipsExpandTrigger='<c-j>'
-let g:UltiSnipsJumpForwardTrigger='<c-j>'
-let g:UltiSnipsJumpBackwardTrigger='<c-k>'
-let g:UltiSnipsEditSplit='vertical'
-
-set runtimepath+=~/dotfiles/snippets/
-let g:UltiSnipsSnippetsDir='~/dotfiles/snippets/UltiSnips/'
-
-" }}}
-
-
 " Plugin / deoplete {{{
 if has("nvim")
 
     " Activate deoplete on startup
     let g:deoplete#enable_at_startup = 1
-
-    " Enable utilsnips in deoplete
-    call deoplete#custom#source('ultisnips', 'matchers', ['matcher_fuzzy'])
 
     " <TAB>: completion.
     inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
