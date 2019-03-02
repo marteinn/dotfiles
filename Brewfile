@@ -34,10 +34,12 @@ brew 'zsh'
 
 cask 'amethyst'
 cask 'bartender'
+cask 'paw'
 cask 'dropbox'
 cask 'firefoxdeveloperedition'
 cask 'google-chrome'
 cask 'iterm2'
+cask 'java'
 cask 'macvim'
 cask 'monodraw'
 cask 'poedit'
@@ -45,10 +47,11 @@ cask 'reactotron'
 cask 'selfcontrol'
 cask 'slack'
 cask 'spotify'
-# cask 'virtualbox'
 cask 'android-studio'
+
+# Requires java cask
+brew 'clojure'
 
 # TODO: missing
 # hex friend
-# macvim
 # self control
