@@ -3,10 +3,14 @@ if [ -z "$ZSH_NAME" ]; then
     export PS1="\[\033[0;31m\]\h:\W \u\[\033[0m\]$ "
 fi
 
-# shortcuts
+# Default language
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+
+# Shortcuts
 export P="$HOME/Projekt"
 
-# postgres
+# Postgres
 export PGHOST=localhost
 
 # Larger bash history (allow 32³ entries; default is 500)
@@ -21,3 +25,9 @@ export HISTIGNORE="ls:ls *:cd:cd -:pwd;exit:date:* --help"
 export ANDROID_HOME=${HOME}/Library/Android/sdk
 export PATH=${PATH}:${ANDROID_HOME}/tools
 export PATH=${PATH}:${ANDROID_HOME}/platform-tools
+
+# Make fzf respect gitignore
+export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
+
+# Associate vim with react-native
+export REACT_EDITOR=mvim
