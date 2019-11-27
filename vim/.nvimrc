@@ -131,7 +131,6 @@ Plug 'ap/vim-css-color'
 Plug 'altercation/vim-colors-solarized'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
-Plug 'groenewege/vim-less'
 Plug 'Lokaltog/vim-easymotion'
 Plug 'scrooloose/syntastic'
 Plug 'scrooloose/nerdcommenter'
@@ -145,14 +144,19 @@ Plug 'machakann/vim-highlightedyank'
 Plug 'wfleming/vim-codeclimate'
 Plug 'elixir-lang/vim-elixir'
 Plug 'pangloss/vim-javascript'
-Plug 'mxw/vim-jsx'
+Plug 'MaxMEllon/vim-jsx-pretty'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'chr4/nginx.vim'
 Plug 'slashmili/alchemist.vim'
 Plug 'elmcast/elm-vim'
 Plug 'leafgarland/typescript-vim'
+Plug 'peitalin/vim-jsx-typescript'
 Plug 'raichoo/purescript-vim'
 Plug 'manicmaniac/coconut.vim'
+Plug 'neoclide/coc.nvim', {'tag': '*', 'branch': 'release'}
+Plug 'hylang/vim-hy'
+Plug 'zah/nim.vim'
+Plug 'marteinn/Vaja-Vim'
 
 
 " Add plugins to &runtimepath
@@ -192,6 +196,32 @@ set wildignore+=*/node_modules
 set wildignore+=*.zip,*.tar.gz,*.tar.bz2,*.rar,*.tar.xz
 
 " }}}
+
+
+" Coc
+
+let g:coc_global_extensions = [
+    \ 'coc-css',
+    \ 'coc-elixir',
+    \ 'coc-emmet',
+    \ 'coc-eslint',
+    \ 'coc-html',
+    \ 'coc-pairs',
+    \ 'coc-phpls',
+    \ 'coc-prettier',
+    \ 'coc-python',
+    \ 'coc-snippets',
+    \ 'coc-stylelint',
+    \ 'coc-svg',
+    \ 'coc-tsserver',
+    \ 'coc-yank',
+\ ]
+
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+command! -nargs=0 Format :call CocAction('format')
 
 
 " Statusline settings {{{
@@ -294,7 +324,7 @@ endif
 "
 let g:fzf_nvim_statusline=0
 let g:fzf_files_options='--preview "cat {}"'
-nnoremap <silent> <c-p> :Files<CR>
+nnoremap <silent> <c-p> :FZF<CR>
 nnoremap <silent> <leader>b :Buffers<CR>
 nnoremap <silent> <leader>f :Ag<CR>
 " }}}
