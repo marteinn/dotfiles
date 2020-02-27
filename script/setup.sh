@@ -17,6 +17,8 @@ ln -sf ~/dotfiles/ssh/config ~/.ssh/config
 
 # tmux
 ln -sf ~/dotfiles/.tmux.conf ~/.tmux.conf
+ln -sf ~/dotfiles/.tmux-macos ~/.tmux-macos
+ln -sf ~/dotfiles/.tmux-linux ~/.tmux-linux
 
 # zsh
 ln -sf ~/dotfiles/.zprofile ~/.zprofile
