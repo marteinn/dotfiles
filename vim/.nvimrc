@@ -328,3 +328,10 @@ nnoremap <silent> <c-p> :FZF<CR>
 nnoremap <silent> <leader>b :Buffers<CR>
 nnoremap <silent> <leader>f :Ag<CR>
 " }}}
+
+" Add support for optional config file
+try
+  source ~/.nvimrc_extra
+catch
+  " Ignore
+endtry
