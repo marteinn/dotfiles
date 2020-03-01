@@ -15,7 +15,7 @@
     git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
     ```
 
-- Install brew
+- MacOS: Install brew
 
     ```
     cd ~/dotfiles && brew bundle
@@ -27,7 +27,7 @@
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
     ```
 
-- Open iTerm2 and activate solarized dark
+- MacOS: Open iTerm2 and activate solarized dark
     ```
     cmd+i -> colors preset -> colarized dark
     ```
@@ -37,7 +37,7 @@
     chsh -s /bin/zsh
     ```
 
-- Open ~/dotfiles/.osx and run customizations
+- MacOS: Open ~/dotfiles/.osx and run customizations
 
 - Done!
 
