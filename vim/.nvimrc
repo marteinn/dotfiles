@@ -137,9 +137,6 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'tpope/vim-fugitive'
 Plug 'python-mode/python-mode', { 'branch': 'develop' }
 Plug 'davidhalter/jedi-vim', { 'for': 'python' }
-if has("nvim")
-    Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-endif
 Plug 'machakann/vim-highlightedyank'
 Plug 'wfleming/vim-codeclimate'
 Plug 'elixir-lang/vim-elixir'
@@ -307,21 +304,8 @@ nmap <Leader>af :CodeClimateAnalyzeCurrentFile<CR>
 " }}}
 
 
-" Plugin / deoplete {{{
-if has("nvim")
-
-    " Activate deoplete on startup
-    let g:deoplete#enable_at_startup = 1
-
-    " <TAB>: completion.
-    inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
-
-endif
-" }}}
-
-
 " Plugin / fzf {{{
-"
+
 let g:fzf_nvim_statusline=0
 let g:fzf_files_options='--preview "cat {}"'
 nnoremap <silent> <c-p> :FZF<CR>
