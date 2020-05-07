@@ -135,8 +135,6 @@ Plug 'Lokaltog/vim-easymotion'
 Plug 'scrooloose/syntastic'
 Plug 'scrooloose/nerdcommenter'
 Plug 'tpope/vim-fugitive'
-Plug 'python-mode/python-mode', { 'branch': 'develop' }
-Plug 'davidhalter/jedi-vim', { 'for': 'python' }
 Plug 'machakann/vim-highlightedyank'
 Plug 'wfleming/vim-codeclimate'
 Plug 'elixir-lang/vim-elixir'
@@ -261,22 +259,6 @@ let g:EasyMotion_keys = 'qwertyuiopåasdfghjklöäzxcvbnm'
 let syntastic_mode_map = { 'passive_filetypes': ['html'] }
 let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_python_checkers = ['flake8']
-
-" }}}
-
-
-" Plugin / python-mode {{{
-
-let g:pymode_python='python3'
-let g:pymode_folding = 0
-
-" }}}
-
-
-" Plugin / vim-jedi {{{
-
-" Show documentation
-let g:jedi#documentation_command = "<leader>m"
 
 " }}}
 
