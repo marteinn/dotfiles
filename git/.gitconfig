@@ -38,6 +38,9 @@
     # Show changed files in commit
     show-files = diff-tree --no-commit-id --name-only -r
 
+    # Checkout specific pr (git pr XXXX)
+    pr = !sh -c \"git fetch upstream pull/${1}/head:pr/${1} && git checkout pr/${1}\"
+
     master = checkout master
     develop = checkout develop
 
