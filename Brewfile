@@ -5,6 +5,7 @@ tap 'homebrew/core'
 tap 'caskroom/cask'
 tap 'caskroom/versions'
 
+brew 'dnsmasq'
 brew 'elixir'
 brew 'elm'
 brew 'fd'
