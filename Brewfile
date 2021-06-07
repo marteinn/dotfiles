@@ -2,8 +2,8 @@ cask_args appdir: '/Applications'
 
 tap 'homebrew/bundle'
 tap 'homebrew/core'
-tap 'caskroom/cask'
-tap 'caskroom/versions'
+tap 'homebrew/cask'
+tap 'homebrew/versions'
 
 brew 'dnsmasq'
 brew 'elixir'
