@@ -37,14 +37,12 @@ brew 'wget'
 brew 'yarn'
 brew 'zsh'
 
-cask 'android-studio'
 cask 'amethyst'
 cask 'bartender'
 cask 'dropbox'
 cask 'firefoxdeveloperedition'
 cask 'google-chrome'
 cask 'iterm2'
-cask 'java'
 cask 'macvim'
 cask 'monodraw'
 cask 'paw'
@@ -55,9 +53,6 @@ cask 'slack'
 cask 'spotify'
 cask 'visual-studio-code'
 cask 'ngrok'
-
-# Requires java cask
-brew 'clojure'
 
 # TODO: missing
 # hex friend
