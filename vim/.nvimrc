@@ -229,7 +229,7 @@ set laststatus=2
 set ttimeoutlen=50
 
 " Update statusline
-let &statusline='%.50f [%{exists("*fugitive#head")?fugitive#head():""}] %r %= %c%V | %y %l/%L'
+let &statusline='%.50f [%{exists("*FugitiveHead")?FugitiveHead():""}] %r %= %c%V | %y %l/%L'
 
 " }}}
 
