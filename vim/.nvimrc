@@ -148,7 +148,8 @@ Plug 'leafgarland/typescript-vim'
 Plug 'peitalin/vim-jsx-typescript'
 Plug 'raichoo/purescript-vim'
 Plug 'manicmaniac/coconut.vim'
-Plug 'neoclide/coc.nvim', {'tag': '*', 'branch': 'release'}
+" Plug 'neoclide/coc.nvim', {'tag': '*', 'branch': 'release'}
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'hylang/vim-hy'
 Plug 'zah/nim.vim'
 Plug 'marteinn/Vaja-Vim'
@@ -204,7 +205,7 @@ let g:coc_global_extensions = [
     \ 'coc-pairs',
     \ 'coc-phpls',
     \ 'coc-prettier',
-    \ 'coc-python',
+    \ 'coc-pyright',
     \ 'coc-snippets',
     \ 'coc-stylelint',
     \ 'coc-svg',
