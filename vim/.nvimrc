@@ -128,7 +128,13 @@ call plug#begin('~/.vim/plugged')
 
 " Plugins
 Plug 'ap/vim-css-color'
-Plug 'altercation/vim-colors-solarized'
+
+if has("nvim")
+    Plug 'maxmx03/solarized.nvim'
+else
+    Plug 'altercation/vim-colors-solarized'
+endif
+
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'Lokaltog/vim-easymotion'
