@@ -1,1 +1,7 @@
-ServerAliveInterval 60
+Host *
+    ServerAliveInterval 60
+    AddKeysToAgent yes
+
+# UseKeychain is macOS-only and errors on other OpenSSH builds
+Match exec "uname | grep -q Darwin"
+    UseKeychain yes

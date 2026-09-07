@@ -7,7 +7,7 @@
 
 - Setup files
     ```
-    source $HOME/dotfiles/script/setup.sh
+    bash $HOME/dotfiles/script/setup.sh
     ```
 
 - Install prezto
@@ -21,20 +21,37 @@
     cd ~/dotfiles && brew bundle
     ```
 
-- Install vim-plug
+    `.zprofile` runs `brew shellenv` to put brew tools on `PATH`, but it is only
+    sourced for login shells.
+
+- Neovim: start it once (requires 0.12+)
     ```
-    curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
-    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+    nvim
+    ```
+
+    First launch installs the plugins and treesitter parsers. Commit the
+    resulting `vim/nvim-pack-lock.json`; update later with
+    `:lua vim.pack.update()`.
+
+- Neovim: install the language servers
+    ```
+    uv tool install basedpyright              # python
+    uv tool install ruff                      # python
+    npm i -g @vtsls/language-server           # javascript, typescript
+    npm i -g vscode-langservers-extracted     # eslint, css, html, json
+    npm i -g intelephense                     # php
+    ```
+
+    `elixir-ls` comes from the Brewfile. Verify with `:checkhealth vim.lsp`.
+
+- Cloudflare Zero Trust: build the CA bundle, or `elixir-ls` will not start
+    ```
+    refresh_ca_bundle
     ```
 
 - MacOS: Open iTerm2 and activate solarized dark
     ```
-    cmd+i -> colors preset -> colarized dark
-    ```
-
-- Make zsh default shell
-    ```
-    chsh -s /bin/zsh
+    cmd+i -> colors preset -> solarized dark
     ```
 
 - MacOS: Open ~/dotfiles/.osx and run customizations

@@ -12,9 +12,6 @@ fi
 
 # Customize to your needs...
 
-# Activate vim zsh vim bindings
-bindkey -v
-
 # Allow comments
 set -k
 

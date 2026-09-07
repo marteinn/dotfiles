@@ -4,8 +4,15 @@ if [ -z "$ZSH_NAME" ]; then
 fi
 
 # Default language
-export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
+
+# Editor
+if command -v nvim > /dev/null 2>&1; then
+    export EDITOR=nvim
+else
+    export EDITOR=vim
+fi
+export VISUAL="$EDITOR"
 
 # Shortcuts
 export P="$HOME/Projekt"
@@ -13,21 +20,31 @@ export P="$HOME/Projekt"
 # Postgres
 export PGHOST=localhost
 
-# Larger bash history (allow 32³ entries; default is 500)
+# Larger history (allow 32³ entries; default is 500)
 export HISTSIZE=32768
-export HISTFILESIZE=$HISTSIZE
-export HISTCONTROL=ignoredups
 
-# Make some commands not show up in history
-export HISTIGNORE="ls:ls *:cd:cd -:pwd;exit:date:* --help"
+# Bash-only history settings; prezto's history module covers the zsh side
+if [ -z "$ZSH_NAME" ]; then
+    export HISTFILESIZE=$HISTSIZE
+    export HISTCONTROL=ignoredups
+
+    # Make some commands not show up in history
+    export HISTIGNORE="ls:ls *:cd:cd -:pwd;exit:date:* --help"
+fi
 
 # Android
 export ANDROID_HOME=${HOME}/Library/Android/sdk
-export PATH=${PATH}:${ANDROID_HOME}/tools
+export PATH=${PATH}:${ANDROID_HOME}/cmdline-tools/latest/bin
 export PATH=${PATH}:${ANDROID_HOME}/platform-tools
+export PATH=${PATH}:${ANDROID_HOME}/emulator
 
 # Make fzf respect gitignore
 export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
 
-# Associate vim with react-native
-export REACT_EDITOR=mvim
+# Associate editor with react-native
+export REACT_EDITOR=nvim
+
+# Built by refresh_ca_bundle in .functions; see there for why.
+if [ -f "${HOME}/.certs/macos-ca-bundle.pem" ]; then
+    export HEX_CACERTS_PATH="${HOME}/.certs/macos-ca-bundle.pem"
+fi

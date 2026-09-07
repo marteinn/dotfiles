@@ -4,7 +4,6 @@
 
 [mergetool]
     keepBackup = true
-    path = nvim
 
 [alias]
     a = add
@@ -14,7 +13,7 @@
     cm = commit -m
     ch = checkout
     lv = !sh -c 'git log --oneline --decorate $1' -
-    l = git log --name-status
+    l = log --name-status
     lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
     undo = reset --soft HEAD~1
 
@@ -45,24 +44,25 @@
     main = checkout main
     develop = checkout develop
 
-    pr = !sh -c \"git fetch upstream pull/${1}/head:pr/${1} && git checkout pr/${1}\"
-
 [core]
     excludesfile = ~/.gitignore
-    editor = /usr/bin/vim
+    editor = nvim
     ignorecase = false
 
 [color]
-    diff = true
+    ui = auto
 
-[push]
-    default = simple
+[init]
+    defaultBranch = main
+
+[pull]
+    rebase = false
 
 [merge "ours"]
     driver = true
 
 [merge]
-    tool = vimdiff
+    tool = nvimdiff
 
 [status]
     showUntrackedFiles = all

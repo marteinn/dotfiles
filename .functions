@@ -5,17 +5,7 @@ function mkd() {
 
 # Serve static web assets
 function simple_webserver {
-    python -m http.server 8001
-}
-
-# HTTP lookup
-function http() {
-    curl http://httpcode.info/$1;
-}
-
-# Start a plain mail server
-function simple_mailserver {
-    python -m smtpd -n -c DebuggingServer localhost:1025
+    python3 -m http.server 8001
 }
 
 # Create new tmux session by folder name
@@ -34,4 +24,32 @@ function nvm_session() {
     fi
 
     nvm use
+}
+
+# Initialize rbenv
+function rbenv_session() {
+    if [ -n "$ZSH_VERSION" ]; then
+        eval "$(rbenv init - zsh)"
+    else
+        eval "$(rbenv init - bash)"
+    fi
+}
+
+# Initialize mise
+function mise_session() {
+    if [ -n "$ZSH_VERSION" ]; then
+        eval "$(mise activate zsh)"
+    else
+        eval "$(mise activate bash)"
+    fi
+}
+
+# Refresh Cloudflare Zero Trust CA Bundle
+function refresh_ca_bundle() {
+    local out="${HOME}/.certs/macos-ca-bundle.pem"
+    mkdir -p "$(dirname "$out")"
+    security find-certificate -a -p \
+        /System/Library/Keychains/SystemRootCertificates.keychain >| "$out"
+    security find-certificate -a -p /Library/Keychains/System.keychain >> "$out"
+    echo "Wrote $(grep -c 'BEGIN CERT' "$out") certificates to $out"
 }

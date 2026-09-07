@@ -1,2 +1,8 @@
 /.extra
 /node_modules
+/plans
+
+# Editor / OS cruft
+*.swp
+*.swo
+.DS_Store
