@@ -10,6 +10,7 @@ brew 'git-flow-next'
 brew 'htop'
 brew 'libmagic'
 brew 'mise'
+brew 'mkcert'
 brew 'nvm'
 brew 'neovim'
 brew 'node'            # the js/ts/php language servers are npm packages
